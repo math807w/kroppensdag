@@ -4,11 +4,425 @@
     <meta charset="UTF-8">
     <title>Kroppens Dag | 5. april 2019</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        /*
+        $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 100
+                    }, 900, function(){
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+        */
+
+        $(document).ready(function(){
+	$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+        var nav = document.getElementById('nav');
+        //var logo = document.getElementById('logo');
+		$(this).toggleClass('open');
+        if(nav.style.opacity == 0){
+        nav.style.opacity = 1;
+        //logo.style.opacity = 1;
+        }else if(nav.style.opacity == 1){
+        nav.style.opacity = 0;
+        //logo.style.opacity = 0;
+        }
+	});
+});
+        
+    </script>
 </head>
 
+<style>
+/* FARVER */
+/*
+Mørkeblå: #36454F
+Lysblå: #445763
+Hvid: #F6F6F6
+Gul: #F1C40F
+*/
+
+/* Animerede ikoner start */
+/* Icon 3 */
+
+#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+  width: 40px;
+  height: 24px;
+  position: relative;
+  margin: 0 auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #f6f6f6;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 10px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 20px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+/* Animerede ikoner slut */
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: "Lato";
+    background: linear-gradient(to bottom,#36454F, #445763) no-repeat;
+}
+body{
+    margin:0 10%;
+}
+main{
+    max-width: 1100px;
+}
+h1 {
+    font-family: "Lato";
+    font-size: 8vw;
+    font-weight: 600;
+    color:#f1c40f;
+    
+}
+h2{
+    color:#f6f6f6;
+    font-size: 3em;
+}
+a {
+    text-decoration: none;
+}
+section{
+    height: calc(100vh - 100px*2);
+    margin: 100px auto;
+    width:100%;
+    max-width: 1100px;
+    
+}
+
+section:first-of-type{
+    display: grid;
+    grid-template-rows: 9fr 1fr;
+}
+
+#title {
+    display: flex;
+}
+
+#title-wrapper {
+    justify-self: center;
+    align-self: center;
+}
+
+#spacing {
+    margin-right: 3vw;
+}
+
+#mylink{
+    margin: auto;
+}
+
+#mylink a{
+    color: #f6f6f6;
+    justify-self: center;
+    font-size: 3em;
+}
+#heading{
+    position: absolute;
+}
+#burger-menu-icon{
+    justify-self: end;
+    grid-column: 3;
+}
+header{
+    width:100%;
+    position: fixed;
+    top:0;
+    align-content: center;
+    z-index:999;
+}
+#nav{
+    color:#f6f6f6;
+    opacity: 0;
+    transition: opacity .5s;
+    grid-column: 2;
+    justify-self: center;
+}
+#nav ul{
+    list-style-type: none;
+    
+}
+#nav ul li{
+    float: left;
+    margin-right:10px;
+}
+#nav ul li:last-of-type{
+    margin-right:0px;
+}
+#nav ul li a{
+    height:100%;
+    width:100%;
+    padding:10px 10px;
+    color:#f6f6f6;
+}
+
+#header-content{
+    width:80%;
+    max-width: 1100px;
+    padding:16px 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    justify-self: center;
+    align-items: center;
+}
+#logo{
+    height:50px;
+    justify-self: flex-start;
+}
+#logo img{
+    height:50px;
+    width:auto;
+}
+
+#logo a{
+    width:100%;
+    height:100%;
+}
+
+.anchor-link{
+    margin-top:64px;
+}
+
+</style>
+
 <body>
+    <a id="home"></a>
+<header>
+    <div id="header-content">
+        <a href="#home">
+            <div id="logo">
+                <img src="img/logo.png" />
+            </div>
+        </a>
+        <nav id="nav">
+            <ul>
+                <li><a href="#om" class="menu-link">Om dagen</a></li>
+                <li><a href="#section2" class="menu-link">Punkt 2</a></li>
+                <li><a href="#speakers" class="menu-link">Speakers</a></li>
+                <li><a href="#section4" class="menu-link">Punkt 4</a></li>
+                <li><a href="#kontakt" class="menu-link">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div id="burger-menu-icon">
+            <div id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>     
+        </div>
+    </div>
+</header>
+<main>
+    <section>
+        <div id="title-wrapper">
+            <h1 id="title">
+                <span class="letter">K</span><span class="letter">R</span><span class="letter">O</span>
+                <span class="letter">P</span><span class="letter">P</span><span class="letter">E</span>
+                <span class="letter">N</span><span class="letter">S</span><span id="spacing"></span>
+                <span class="letter">D</span><span class="letter">A</span><span class="letter">G</span>
+            </h1>
+            <h2>#LetsFaceIt</h2>
+        </div>
+        <div id="mylink">
+            <a href="#om"><i class="fas fa-arrow-alt-circle-down"></i></a>
+        </div>
+    </section>
+
+    <section>
+        <a id="om" class="anchor-link">&nbsp;</a>
+        <div id="heading">
+            <h2>Hvad er Kroppens Dag?</h2>
+        </div>
+    </section>
+
+    <section style="background-color:none;">
+        <a id="section2" class="anchor-link">&nbsp;</a>
+        <h2>Section 2</h2>
+
+    </section>
+
+    <section style="background-color:none;">
+        <a id="speakers" class="anchor-link">&nbsp;</a>
+        <h2>Speakers</h2>
+    </section>
+
+    <section style="background-color:none">
+        <a id="section4" class="anchor-link">&nbsp;</a>
+        <h2>Section 4</h2>
+
+    </section>
+
+    <section style="background-color:none;">
+        <a id="kontakt" class="anchor-link">&nbsp;</a>
+        <h2>Kontakt os</h2>
+    </section>
+</main>
+
+<script type="application/javascript">
+var b = document.body,
+        st = 'scrollTop',
+        sh = 'scrollHeight',
+        letter = document.getElementsByClassName('letter');
+
+    // Titel animation
+    document.addEventListener('scroll', titleAnimation);
+    function titleAnimation() {
+        var scroll = (((b[st]) / (b[sh]) * 100) * .4),
+            c = 0;
+        for (i = 0; i < letter.length; i++)
+        {
+            if (b[st] > 0) {
+                var margin = Math.abs(scroll + c);
+                letter[i].style.marginTop = ('-' + margin.toFixed(2) + '%');
+                c += scroll;
+            } else{
+                letter[i].style.marginTop = ('0%');
+            }
+        }
+    }
+
+    var menuLink = document.getElementsByClassName('menu-link');
+    for (i = 0; i < menuLink.length; i++){
+    menuLink[i].addEventListener('click', smoothScroll);
+    }
+    function smoothScroll() {
+        var menuLink = document.getElementsByClassName('menu-link');
+        for (i = 0; i < menuLink.length; i++){
+        console.log(menuLink[i].getAttribute('href'));
+        var pos = 0;
+        var id = setInterval(frame, 15);
+        var activeLink = menuLink[i].getAttribute('href');
+        var linkId = activeLink;
+        function frame() {
+            if (linkId.scrollTop == b[st]) {
+            clearInterval(id);
+            setHash();
+            } else {
+            pos++; 
+            activeLink.scrollTop = pos + 'px'; 
+            }
+        }
+        }
+        var timeOut = setTimeout(
+            function setHash(){
+                var hash = window.location.hash;
+                alert(linkId);
+            }, 1000);
+        
+
+    }
+
+/*
+    // Heading animation
+    document.addEventListener('scroll', sectionOneAnimation);
+    function sectionOneAnimation() {
+        var scroll = ((b[st]) / (b[sh]) * 100),
+            heading = document.getElementById('heading'),
+            pos = 15,
+            smp = Math.abs(pos - scroll),
+            sdp = Math.abs(scroll / pos);
+
+        if (scroll > 0 && scroll < pos) {
+            heading.style.marginLeft = ('-' + smp.toFixed(2) + 'vw');
+            heading.style.opacity = sdp.toFixed(2);
+            console.log(heading.style.opacity);
+        } else {
+            heading.style.marginLeft = ('-3px');
+            heading.style.opacity = ('1');
+        }
+    }
+*/
+</script>
+
 
 </body>
 
