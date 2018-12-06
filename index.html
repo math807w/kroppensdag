@@ -170,6 +170,7 @@ h2{
 a {
     text-decoration: none;
 }
+
 section{
     height: calc(100vh - 100px*2);
     margin: 100px auto;
@@ -181,6 +182,10 @@ section{
 section:first-of-type{
     display: grid;
     grid-template-rows: 9fr 1fr;
+}
+
+section:first-of-type h2{
+    text-align: center;
 }
 
 #title {
@@ -271,6 +276,46 @@ header{
     margin-top:64px;
 }
 
+/*---------- BUTTONS ---------- */
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    width: 80px;
+    font-weight: 300;
+    text-decoration: none;
+    background-color:#3B5998;
+    border-radius: 200px;
+    color: #fff;
+    transition: background-color 0.2s, border 0.2s;
+    text-align: center;  
+
+}
+
+#button-wrapper{
+    justify-content: center;
+    margin: auto;
+    margin-top: -64px;
+}
+
+    
+.btn-full {
+        margin-right: 15px;
+    
+}
+
+
+.btn:hover,
+.btn:active, 
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #324b80;
+    
+}
+
+
+
 </style>
 
 <body>
@@ -312,6 +357,10 @@ header{
             </h1>
             <h2>#LetsFaceIt</h2>
         </div>
+        <div id="button-wrapper">
+            <a class="btn btn-full" href="https://www.facebook.com/Kroppens-dag-582192425543508/" target="_blank">Facebook</a>
+            <a class="btn" href="https://www.instagram.com/?hl=da" target="_blank">Instagram</a>
+        </div>
         <div id="mylink">
             <a href="#om"><i class="fas fa-arrow-alt-circle-down"></i></a>
         </div>
@@ -345,6 +394,10 @@ header{
         <a id="kontakt" class="anchor-link">&nbsp;</a>
         <h2>Kontakt os</h2>
     </section>
+
+    <footer>
+
+    </footer>
 </main>
 
 <script type="application/javascript">
