@@ -23,14 +23,6 @@ width: 40px;
 height: 24px;
 position: relative;
 margin: 0 auto;
--webkit-transform: rotate(0deg);
--moz-transform: rotate(0deg);
--o-transform: rotate(0deg);
-transform: rotate(0deg);
--webkit-transition: .5s ease-in-out;
--moz-transition: .5s ease-in-out;
--o-transition: .5s ease-in-out;
-transition: .5s ease-in-out;
 cursor: pointer;
 }
 
@@ -41,12 +33,7 @@ height: 3px;
 width: 100%;
 background: #f6f6f6;
 border-radius: 9px;
-opacity: 1;
 left: 0;
--webkit-transform: rotate(0deg);
--moz-transform: rotate(0deg);
--o-transform: rotate(0deg);
-transform: rotate(0deg);
 -webkit-transition: .25s ease-in-out;
 -moz-transition: .25s ease-in-out;
 -o-transition: .25s ease-in-out;
@@ -188,9 +175,10 @@ section:first-of-type{
 #nav{
     color:#f6f6f6;
     opacity: 0;
-    transition: opacity .5s;
+    transition: opacity .25s;
     grid-column: 2;
     justify-self: center;
+    display: none;
 }
 #nav ul{
     list-style-type: none;
