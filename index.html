@@ -8,350 +8,69 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        /*
-        $(document).ready(function(){
-            // Add smooth scrolling to all links
-            $("a").on('click', function(event) {
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() { 
 
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
+    /* ---------------------- */
+    /* SMOOTH SCROLL FUNKTION */
+    /* ---------------------- */
 
-                    // Store hash
-                    var hash = this.hash;
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
 
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top - 100
-                    }, 900, function(){
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                } // End if
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 900, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
             });
-        });
-        */
+        } // End if
+    });
 
-        $(document).ready(function(){
-	$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+    /* ----------- */
+    /* BURGER MENU */
+    /* ----------- */
+
+    var bm = document.getElementById('burger-menu');
+
+    bm.onclick = function(){
         var nav = document.getElementById('nav');
-        //var logo = document.getElementById('logo');
-		$(this).toggleClass('open');
-        if(nav.style.opacity == 0){
-        nav.style.opacity = 1;
-        //logo.style.opacity = 1;
-        }else if(nav.style.opacity == 1){
-        nav.style.opacity = 0;
-        //logo.style.opacity = 0;
+        bm.classList.toggle("open");
+        if(bm.classList.contains("open")){
+            nav.style.display = "block";
+            setTimeout(
+                function(){
+                    nav.style.opacity = 1;
+                    }, 1);
         }
-	});
-});
-        
-    </script>
-</head>
+        else if (bm.classList.contains("open") == false){
+            nav.style.opacity = 0;
+            setTimeout(
+                function(){
+                    nav.style.display = "none";
+                }, 250);
+        }
+    }  
 
-<style>
-/* FARVER */
-/*
-Mørkeblå: #36454F
-Lysblå: #445763
-Hvid: #F6F6F6
-Gul: #F1C40F
-*/
+    /* ----------------------------- */
+    /* H1 Animation ("Kroppens Dag") */
+    /* ----------------------------- */
 
-/* Animerede ikoner start */
-/* Icon 3 */
-
-#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
-  width: 40px;
-  height: 24px;
-  position: relative;
-  margin: 0 auto;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer;
-}
-
-#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: #f6f6f6;
-  border-radius: 9px;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-}
-
-#nav-icon3 span:nth-child(1) {
-  top: 0px;
-}
-
-#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
-  top: 10px;
-}
-
-#nav-icon3 span:nth-child(4) {
-  top: 20px;
-}
-
-#nav-icon3.open span:nth-child(1) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
-}
-
-#nav-icon3.open span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-#nav-icon3.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-#nav-icon3.open span:nth-child(4) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
-}
-/* Animerede ikoner slut */
-
-
-* {
-    padding: 0;
-    margin: 0;
-}
-
-html{
-    font-family: "Lato";
-    background: linear-gradient(to bottom,#36454F, #445763) no-repeat;
-}
-body{
-    margin:0 10%;
-}
-main{
-    max-width: 1100px;
-}
-h1 {
-    font-family: "Lato";
-    font-size: 8vw;
-    font-weight: 600;
-    color:#f1c40f;
-    
-}
-h2{
-    color:#f6f6f6;
-    font-size: 3em;
-}
-a {
-    text-decoration: none;
-}
-section{
-    height: calc(100vh - 100px*2);
-    margin: 100px auto;
-    width:100%;
-    max-width: 1100px;
-    
-}
-
-section:first-of-type{
-    display: grid;
-    grid-template-rows: 9fr 1fr;
-}
-
-#title {
-    display: flex;
-}
-
-#title-wrapper {
-    justify-self: center;
-    align-self: center;
-}
-
-#spacing {
-    margin-right: 3vw;
-}
-
-#mylink{
-    margin: auto;
-}
-
-#mylink a{
-    color: #f6f6f6;
-    justify-self: center;
-    font-size: 3em;
-}
-#heading{
-    position: absolute;
-}
-#burger-menu-icon{
-    justify-self: end;
-    grid-column: 3;
-}
-header{
-    width:100%;
-    position: fixed;
-    top:0;
-    align-content: center;
-    z-index:999;
-}
-#nav{
-    color:#f6f6f6;
-    opacity: 0;
-    transition: opacity .5s;
-    grid-column: 2;
-    justify-self: center;
-}
-#nav ul{
-    list-style-type: none;
-    
-}
-#nav ul li{
-    float: left;
-    margin-right:10px;
-}
-#nav ul li:last-of-type{
-    margin-right:0px;
-}
-#nav ul li a{
-    height:100%;
-    width:100%;
-    padding:10px 10px;
-    color:#f6f6f6;
-}
-
-#header-content{
-    width:80%;
-    max-width: 1100px;
-    padding:16px 0;
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    justify-self: center;
-    align-items: center;
-}
-#logo{
-    height:50px;
-    justify-self: flex-start;
-}
-#logo img{
-    height:50px;
-    width:auto;
-}
-
-#logo a{
-    width:100%;
-    height:100%;
-}
-
-.anchor-link{
-    margin-top:64px;
-}
-
-</style>
-
-<body>
-    <a id="home"></a>
-<header>
-    <div id="header-content">
-        <a href="#home">
-            <div id="logo">
-                <img src="img/logo.png" />
-            </div>
-        </a>
-        <nav id="nav">
-            <ul>
-                <li><a href="#om" class="menu-link">Om dagen</a></li>
-                <li><a href="#section2" class="menu-link">Punkt 2</a></li>
-                <li><a href="#speakers" class="menu-link">Speakers</a></li>
-                <li><a href="#section4" class="menu-link">Punkt 4</a></li>
-                <li><a href="#kontakt" class="menu-link">Kontakt</a></li>
-            </ul>
-        </nav>
-        <div id="burger-menu-icon">
-            <div id="nav-icon3">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>     
-        </div>
-    </div>
-</header>
-<main>
-    <section>
-        <div id="title-wrapper">
-            <h1 id="title">
-                <span class="letter">K</span><span class="letter">R</span><span class="letter">O</span>
-                <span class="letter">P</span><span class="letter">P</span><span class="letter">E</span>
-                <span class="letter">N</span><span class="letter">S</span><span id="spacing"></span>
-                <span class="letter">D</span><span class="letter">A</span><span class="letter">G</span>
-            </h1>
-            <h2>#LetsFaceIt</h2>
-        </div>
-        <div id="mylink">
-            <a href="#om"><i class="fas fa-arrow-alt-circle-down"></i></a>
-        </div>
-    </section>
-
-    <section>
-        <a id="om" class="anchor-link">&nbsp;</a>
-        <div id="heading">
-            <h2>Hvad er Kroppens Dag?</h2>
-        </div>
-    </section>
-
-    <section style="background-color:none;">
-        <a id="section2" class="anchor-link">&nbsp;</a>
-        <h2>Section 2</h2>
-
-    </section>
-
-    <section style="background-color:none;">
-        <a id="speakers" class="anchor-link">&nbsp;</a>
-        <h2>Speakers</h2>
-    </section>
-
-    <section style="background-color:none">
-        <a id="section4" class="anchor-link">&nbsp;</a>
-        <h2>Section 4</h2>
-
-    </section>
-
-    <section style="background-color:none;">
-        <a id="kontakt" class="anchor-link">&nbsp;</a>
-        <h2>Kontakt os</h2>
-    </section>
-</main>
-
-<script type="application/javascript">
-var b = document.body,
-        st = 'scrollTop',
-        sh = 'scrollHeight',
-        letter = document.getElementsByClassName('letter');
+    var b = document.body,
+    st = 'scrollTop',
+    sh = 'scrollHeight',
+    letter = document.getElementsByClassName('letter');
 
     // Titel animation
     document.addEventListener('scroll', titleAnimation);
@@ -370,39 +89,169 @@ var b = document.body,
         }
     }
 
-    var menuLink = document.getElementsByClassName('menu-link');
-    for (i = 0; i < menuLink.length; i++){
-    menuLink[i].addEventListener('click', smoothScroll);
-    }
-    function smoothScroll() {
-        var menuLink = document.getElementsByClassName('menu-link');
-        for (i = 0; i < menuLink.length; i++){
-        console.log(menuLink[i].getAttribute('href'));
-        var pos = 0;
-        var id = setInterval(frame, 15);
-        var activeLink = menuLink[i].getAttribute('href');
-        var linkId = activeLink;
-        function frame() {
-            if (linkId.scrollTop == b[st]) {
-            clearInterval(id);
-            setHash();
-            } else {
-            pos++; 
-            activeLink.scrollTop = pos + 'px'; 
-            }
-        }
-        }
-        var timeOut = setTimeout(
-            function setHash(){
-                var hash = window.location.hash;
-                alert(linkId);
-            }, 1000);
-        
+    });
+    </script>
+</head>
 
-    }
+<style>
+
+</style>
+
+<body>
+<header>
+    <div id="header-content">
+        <a href="#home">
+            <div id="logo">
+                <img src="img/logo.png" />
+            </div>
+        </a>
+        <nav id="nav">
+            <ul>
+                <li><a href="#om" class="menu-link">Om dagen</a></li>
+                <li><a href="#video " class="menu-link">Video</a></li>
+                <li><a href="#speakers" class="menu-link">Speakers</a></li>
+                <li><a href="#kontakt" class="menu-link">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div id="burger-menu-icon-wrapper">
+            <div id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>     
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section>
+    <a id="home" class="anchor-link"></a>
+    <div id="title-wrapper">
+        <h1 id="title">
+            <span class="letter">K</span><span class="letter">R</span><span class="letter">O</span>
+            <span class="letter">P</span><span class="letter">P</span><span class="letter">E</span>
+            <span class="letter">N</span><span class="letter">S</span><span id="spacing"></span>
+            <span class="letter">D</span><span class="letter">A</span><span class="letter">G</span>
+        </h1>
+        <h2>#LetsFaceIt</h2>
+    </div>
+    <div id="forside-pil-ned">
+        <a href="#om"><i class="fas fa-arrow-alt-circle-down"></i></a>
+    </div>
+</section>
+
+<section>
+    <a id="om" class="anchor-link"></a>
+    <div class="text-block">
+        <div class="heading">
+            <h2>Hvad er Kroppens Dag?</h2>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing 
+            elit. Aenean commodo ligula eget dolor. Aenean massa 
+            <strong>strong</strong>. Cum sociis natoque penatibus 
+            et magnis dis parturient montes, nascetur ridiculus 
+            mus. Donec quam felis, ultricies nec, pellentesque 
+            eu, pretium quis, sem. Nulla consequat massa quis 
+            enim. Donec pede justo, fringilla vel, aliquet nec, 
+            vulputate eget, arcu. 
+            <br/><br/>
+            In enim justo, rhoncus ut, 
+            imperdiet a, venenatis vitae, justo. Nullam dictum 
+            felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. 
+            Vivamus elementum semper nisi. Aenean vulputate 
+            eleifend tellus. Aenean leo ligula, porttitor eu, 
+            consequat vitae, eleifend ac, enim.
+        </p>
+    </div>
+</section>
+
+<section style="background-color:none;">
+    <a id="video" class="anchor-link"></a>
+    <div class="heading">
+        <h2>Video</h2>
+    </div>
+    <div class="video-wrapper">
+        <video></video>
+    </div>
+</section>
+
+<section style="background-color:none;">
+    <a id="speakers" class="anchor-link"></a>
+    <div class="heading">
+        <h2>Speakers</h2>
+    </div>
+    <div class="speakers-grid">
+        <div class="speaker">
+            <div class="speaker-img"></div>
+            <div class="speaker-name">
+                <h3>Søren Østergaard</h3>
+                <h4>Center for Ungdomsforskning</h4>
+            </div>
+            <div class="speaker-text"></div>
+        </div>
+        <div class="speaker">
+            <div class="speaker-img"></div>
+            <div class="speaker-name">
+                <h3>Anne Sophie Warberg Hækkerup</h3>
+                <h4>Gymnasieelev</h4>
+            </div>
+            <div class="speaker-text"></div>
+        </div>
+        <div class="speaker">
+            <div class="speaker-img"></div>
+            <div class="speaker-name">
+                <h3>Mikkel Salling Holmgaard</h3>
+                <h4>Strongmind</h4>
+            </div>
+            <div class="speaker-text"></div>
+        </div>
+    </div>
+</section>
+
+<section style="background-color:none;">
+    <a id="kontakt" class="anchor-link"></a>
+    <h2>Kontakt os</h2>
+</section>
+
+</main>
+
+<script type="application/javascript">
+/*
+//Forsøg på at lave en animation ved at lægge alle links i et Array Q_Q
+    var b = document.body,
+        st = 'scrollTop',
+        sh = 'scrollHeight';
+
+    var menuLink = document.getElementsByClassName('menu-link');
+    //var activeLinkHref = menuLink[4].getAttribute("href");
+    //alert(window.location.hash);
+    //alert(activeLinkHref);
+    for (i = 0; i < menuLink.length; i++){
+        var menuLink = document.getElementsByClassName('menu-link');
+        var myLinks = new Array;
+        myLinks.push(menuLink[i]);
+        alert(myLinks[i]);
+
+        //.addEventListener('click', matchLink(i)));
+    };
+    function matchLink(i){
+        setTimeout(
+            function(){
+            if(menuLink[i].getAttribute("href") == window.location.hash){
+                    alert("true");
+                }else{
+                    alert("false");
+                }
+            }, 1000);
+}
+
+*/  
 
 /*
-    // Heading animation
+// Heading animation
     document.addEventListener('scroll', sectionOneAnimation);
     function sectionOneAnimation() {
         var scroll = ((b[st]) / (b[sh]) * 100),
