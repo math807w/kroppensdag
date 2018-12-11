@@ -46,5 +46,26 @@ document.addEventListener("DOMContentLoaded", function() {
                     nav.style.display = "none";
                 }, 250);
         }
-    }  
+    } 
+    
+/* -------------------- Sticky header -------------------- */
+
+    document.addEventListener('scroll', fixedHeader);
+        function fixedHeader(){
+            var header = document.getElementsByTagName('header')[0],
+                vh = window.innerHeight,
+                st = document.body.scrollTop;
+            if(st < 82){
+                header.style.top = "0px";
+                //header.style.display = "none";
+            }
+            if(st > 82){
+                header.style.top = "-82px";
+                //header.style.display = "block";
+            }
+            if (st > vh){
+                header.style.top = "0px";
+                header.style.position = "fixed";
+            }
+        }
 });
