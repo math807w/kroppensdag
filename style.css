@@ -24,7 +24,7 @@ html{
 }
 
 body{
-    margin:0 10%;
+
 }
 
 main{
@@ -78,6 +78,7 @@ section{
 section:first-of-type{
     display: grid;
     grid-template-rows: 9fr 1fr;
+    margin:auto;
 }
 
 
