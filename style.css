@@ -355,3 +355,42 @@ footer {
     text-align: left;
     font-size: 15px;
 }
+
+/*-------------------- Forside Knapper --------------------*/
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    width: 80px;
+    font-weight: 300;
+    text-decoration: none;
+    background-color:#3B5998;
+    border-radius: 200px;
+    color: #fff;
+    transition: background-color 0.2s, border 0.2s;
+    text-align: center;  
+
+}
+
+#button-wrapper{
+    justify-content: center;
+    margin: auto;
+    margin-top: -260px;
+}
+
+    
+.btn-full {
+        margin-right: 15px;
+    
+}
+
+
+.btn:hover,
+.btn:active, 
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #324b80;
+    
+}
