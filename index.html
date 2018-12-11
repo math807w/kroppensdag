@@ -8,89 +8,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function() { 
-
-    /* ---------------------- */
-    /* SMOOTH SCROLL FUNKTION */
-    /* ---------------------- */
-
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
-
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 900, function(){
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-        } // End if
-    });
-
-    /* ----------- */
-    /* BURGER MENU */
-    /* ----------- */
-
-    var bm = document.getElementById('burger-menu');
-
-    bm.onclick = function(){
-        var nav = document.getElementById('nav');
-        bm.classList.toggle("open");
-        if(bm.classList.contains("open")){
-            nav.style.display = "block";
-            setTimeout(
-                function(){
-                    nav.style.opacity = 1;
-                    }, 1);
-        }
-        else if (bm.classList.contains("open") == false){
-            nav.style.opacity = 0;
-            setTimeout(
-                function(){
-                    nav.style.display = "none";
-                }, 250);
-        }
-    }  
-
-    /* ----------------------------- */
-    /* H1 Animation ("Kroppens Dag") */
-    /* ----------------------------- */
-
-    var b = document.body,
-    st = 'scrollTop',
-    sh = 'scrollHeight',
-    letter = document.getElementsByClassName('letter');
-
-    // Titel animation
-    document.addEventListener('scroll', titleAnimation);
-    function titleAnimation() {
-        var scroll = (((b[st]) / (b[sh]) * 100) * .4),
-            c = 0;
-        for (i = 0; i < letter.length; i++)
-        {
-            if (b[st] > 0) {
-                var margin = Math.abs(scroll + c);
-                letter[i].style.marginTop = ('-' + margin.toFixed(2) + '%');
-                c += scroll;
-            } else{
-                letter[i].style.marginTop = ('0%');
-            }
-        }
-    }
-
-    });
-    </script>
 </head>
 
 <style>
@@ -98,6 +15,8 @@
 </style>
 
 <body>
+
+<!-------------------- Navigations Bar -------------------->
 <header>
     <div id="header-content">
         <a href="#home">
@@ -110,7 +29,7 @@
                 <li><a href="#om" class="menu-link">Om dagen</a></li>
                 <li><a href="#video " class="menu-link">Video</a></li>
                 <li><a href="#speakers" class="menu-link">Speakers</a></li>
-                <li><a href="#kontakt" class="menu-link">Kontakt</a></li>
+                <li><a href="#program" class="menu-link">Program</a></li>
             </ul>
         </nav>
         <div id="burger-menu-icon-wrapper">
@@ -124,24 +43,23 @@
     </div>
 </header>
 
-<main>
-
+<!-------------------- Forside --------------------> 
+    
 <section>
     <a id="home" class="anchor-link"></a>
     <div id="title-wrapper">
         <h1 id="title">
-            <span class="letter">K</span><span class="letter">R</span><span class="letter">O</span>
-            <span class="letter">P</span><span class="letter">P</span><span class="letter">E</span>
-            <span class="letter">N</span><span class="letter">S</span><span id="spacing"></span>
-            <span class="letter">D</span><span class="letter">A</span><span class="letter">G</span>
+           KROPPENS DAG
         </h1>
         <h2>#LetsFaceIt</h2>
     </div>
     <div id="forside-pil-ned">
-        <a href="#om"><i class="fas fa-arrow-alt-circle-down"></i></a>
+        <a href="#om"><i class="fa fa-chevron-down"></i></a>
     </div>
 </section>
 
+<!-------------------- Om --------------------> 
+<main class="bggradient">
 <section>
     <a id="om" class="anchor-link"></a>
     <div class="text-block">
@@ -149,24 +67,20 @@
             <h2>Hvad er Kroppens Dag?</h2>
         </div>
         <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing 
-            elit. Aenean commodo ligula eget dolor. Aenean massa 
-            <strong>strong</strong>. Cum sociis natoque penatibus 
-            et magnis dis parturient montes, nascetur ridiculus 
-            mus. Donec quam felis, ultricies nec, pellentesque 
-            eu, pretium quis, sem. Nulla consequat massa quis 
-            enim. Donec pede justo, fringilla vel, aliquet nec, 
-            vulputate eget, arcu. 
-            <br/><br/>
-            In enim justo, rhoncus ut, 
-            imperdiet a, venenatis vitae, justo. Nullam dictum 
-            felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. 
-            Vivamus elementum semper nisi. Aenean vulputate 
-            eleifend tellus. Aenean leo ligula, porttitor eu, 
-            consequat vitae, eleifend ac, enim.
+                #LETSFACEIT er lavet i samarbejdet med Kroppens Dag, som skal sætte fokus på unges opfattelse af dem selv og deres krop. Kroppens dag er et heldags event hvor foredrag, debatter og andre aktiviteter, skal være med til at gøre op, med idealer og “den perfekte krop”. <br><br>
+                Vi er generation perfekt
+                Lets face it. 
+                Generationen hvor det unaturlige er naturligt, godt - er ikke godt nok, og hvor kroppen er blevet en central rolle for ens identitet.
+                Vi mødes konstant af medier, der sætter standarder for hvordan vi skal se ud, hvordan vi skal opføre os - og vi bliver hele tiden bedt om at skulle forholde os til andre og have en mening. Dette fører os til, at vi går i et konstant pres for andres meninger til en selv. Meninger som skaber usikkerhed og gør, at vi prøver at tilpasse os andre. 
+                
+                Vi kommer alle fra generation perfekt 
+                
+
         </p>
     </div>
 </section>
+
+<!-------------------- Video --------------------> 
 
 <section style="background-color:none;">
     <a id="video" class="anchor-link"></a>
@@ -174,9 +88,16 @@
         <h2>Video</h2>
     </div>
     <div class="video-wrapper">
-        <video></video>
+            <video controls>
+                    <source src="movie.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                  </video>
+                  
     </div>
 </section>
+
+<!-------------------- Speakers --------------------> 
 
 <section style="background-color:none;">
     <a id="speakers" class="anchor-link"></a>
@@ -185,7 +106,7 @@
     </div>
     <div class="speakers-grid">
         <div class="speaker">
-            <div class="speaker-img"></div>
+            <div class="speaker-img img1"></div>
             <div class="speaker-name">
                 <h3>Søren Østergaard</h3>
                 <h4>Center for Ungdomsforskning</h4>
@@ -193,7 +114,7 @@
             <div class="speaker-text"></div>
         </div>
         <div class="speaker">
-            <div class="speaker-img"></div>
+            <div class="speaker-img img2"></div>
             <div class="speaker-name">
                 <h3>Anne Sophie Warberg Hækkerup</h3>
                 <h4>Gymnasieelev</h4>
@@ -201,7 +122,7 @@
             <div class="speaker-text"></div>
         </div>
         <div class="speaker">
-            <div class="speaker-img"></div>
+            <div class="speaker-img img3"></div>
             <div class="speaker-name">
                 <h3>Mikkel Salling Holmgaard</h3>
                 <h4>Strongmind</h4>
@@ -211,68 +132,36 @@
     </div>
 </section>
 
+<!-------------------- Program  --------------------> 
+
 <section style="background-color:none;">
-    <a id="kontakt" class="anchor-link"></a>
-    <h2>Kontakt os</h2>
+    <a id="program" class="anchor-link"></a>
+    <h2>Program</h2>
+    <p class="program"> <br> Kl. 10.00: Åbning og velkomst v./Studenterpræst Kirstine Hansen <br><br>
+            Kl. 10.15: Foredrag/oplæg ved Søren Østergaard Center for Ungdomsforskning <br><br>
+            Kl. 11.00: Debatpanelet med Søren Østergaard, Sofie Warberg Hækkerup 
+            (Mikkel Salling Holmgaard fra Strongmind)
+            En studerende og underviser fra UCL
+            Kl. 12.00: bevægelse i kroppen dagens sang med Janne Wind <br><br>
+            Kl. 12.10: Smagspørver ved studerende fra Kold Collage <br><br>
+            Kl. 12.30 sang og undervisning om stemmen v. Janne Wind <br><br>
+            Kl. 13.00-14.30 oplæg om kroppen om kost, bevægelse, hvordan sker der i kroppen. <br><br> 
+            Kl. 14.30 pause og “besøg” i stationer i kirkerummet. <br><br>
+            Stationer: “Tanker til tørre”, “Filosofiske smuglere og andet godtfolk”, “Fotokunst”, “Chill out i Krypten”, “Store tanker i små sko”, “Mad med Glæde”
+            Kl. 15.15: Danseforestilling (Ved dansere fra Odense) <br><br>
+            Kl. 16.00: Sangworkshop v./Janne Wins <br><br>
+            Kl. 16.30-17.00: Glædes koncert med de sange vi har lært på 30 min. <br><br>
+            17.00: Afslutning og tak for timerne sammen
+            </p>
 </section>
 
+<footer>
+    <p class="footerp">Odense Domkirke <br>
+            Adresse: Klosterbakken 2, 5000 Odense C <br>
+            5. April - 2018 kl. 10:00 - 17:00. 
+            </p>
+</footer>
+
 </main>
-
-<script type="application/javascript">
-/*
-//Forsøg på at lave en animation ved at lægge alle links i et Array Q_Q
-    var b = document.body,
-        st = 'scrollTop',
-        sh = 'scrollHeight';
-
-    var menuLink = document.getElementsByClassName('menu-link');
-    //var activeLinkHref = menuLink[4].getAttribute("href");
-    //alert(window.location.hash);
-    //alert(activeLinkHref);
-    for (i = 0; i < menuLink.length; i++){
-        var menuLink = document.getElementsByClassName('menu-link');
-        var myLinks = new Array;
-        myLinks.push(menuLink[i]);
-        alert(myLinks[i]);
-
-        //.addEventListener('click', matchLink(i)));
-    };
-    function matchLink(i){
-        setTimeout(
-            function(){
-            if(menuLink[i].getAttribute("href") == window.location.hash){
-                    alert("true");
-                }else{
-                    alert("false");
-                }
-            }, 1000);
-}
-
-*/  
-
-/*
-// Heading animation
-    document.addEventListener('scroll', sectionOneAnimation);
-    function sectionOneAnimation() {
-        var scroll = ((b[st]) / (b[sh]) * 100),
-            heading = document.getElementById('heading'),
-            pos = 15,
-            smp = Math.abs(pos - scroll),
-            sdp = Math.abs(scroll / pos);
-
-        if (scroll > 0 && scroll < pos) {
-            heading.style.marginLeft = ('-' + smp.toFixed(2) + 'vw');
-            heading.style.opacity = sdp.toFixed(2);
-            console.log(heading.style.opacity);
-        } else {
-            heading.style.marginLeft = ('-3px');
-            heading.style.opacity = ('1');
-        }
-    }
-*/
-</script>
-
-
 </body>
-
 </html>
