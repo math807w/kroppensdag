@@ -53,17 +53,18 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener('scroll', fixedHeader);
         function fixedHeader(){
             var header = document.getElementsByTagName('header')[0],
+                section = document.getElementById('fp-section'),
                 vh = window.innerHeight,
-                st = document.body.scrollTop;
+                st = document.documentElement.scrollTop;
             if(st < 82){
                 header.style.top = "0px";
                 //header.style.display = "none";
             }
-            if(st > 82){
+            if(st > 82 && st < section.offsetHeight){
                 header.style.top = "-82px";
                 //header.style.display = "block";
             }
-            if (st > vh){
+            if (st > section.offsetHeight){
                 header.style.top = "0px";
                 header.style.position = "fixed";
             }
