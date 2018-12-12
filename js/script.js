@@ -49,27 +49,42 @@ document.addEventListener("DOMContentLoaded", function() {
     } 
     
 /* -------------------- Sticky header -------------------- */
-
+    // Lytter efter scroll og hvis der bliver scrollet, kører den function der hedder fixedHeader
     document.addEventListener('scroll', fixedHeader);
+
+    // Starter funktionen
         function fixedHeader(){
-            var header = document.getElementsByTagName('header')[0],
+            // Finder elementerne med ID'et header og fp-section, og deklarerer dem som variabler
+            var header = document.getElementById('header'),
                 section = document.getElementById('fp-section'),
+
+                // Finder vinduets højde (i px), svarende til enheden vh (Viewport height) i CSS
                 vh = window.innerHeight,
-                // Chrome bruger documentElement
+
+                // Finder ud af, hvor mange pixels der er blevet scrollet fra top. Chrome bruger document.documentElement
                 dst = document.documentElement.scrollTop;
-                // Safari bruger body
+
+                // Finder ud af, hvor mange pixels der er blevet scrollet fra top. Safari bruger document.body
                 bst = document.body.scrollTop;
-                
-            if(dst < 82 || bst < 82){
+
+            // Tjekker om scroll-afstanden fra top er højere end headerens højde (82px)
+            if(dst < header.offsetHeight || bst < header.offsetHeight){
+                // Sætter headerens afstand fra top til 0.
                 header.style.top = "0px";
-                //header.style.display = "none";
+                header.style.position = "absolute";
+                /*header.style.display = "none";*/
             }
-            if(dst > 82  && dst < section.offsetHeight || bst > 82 && bst < section.offsetHeight){
-                header.style.top = "-82px";
-                //header.style.display = "block";
+            // Tjekker om scroll-afstanden fra top er større end headerens højde, men mindre end forside-sektionens højde
+            if(dst > header.offsetHeight  && dst < section.offsetHeight || bst > header.offsetHeight && bst < section.offsetHeight){
+                // Sætter headerens afstand fra top - til minus headerens egen størrelse (-82px)
+                header.style.top = "-" + header.offsetHeight + "px";
+                /*header.style.display = "block";*/
             }
+            // Tjekker om scroll-afstanden er større end forside-sektionens højde
             if (dst > section.offsetHeight || bst > section.offsetHeight){
+                // Sætter headerens afstand fra top til 0.
                 header.style.top = "0px";
+                // Sætter headerens position til fixed.
                 header.style.position = "fixed";
             }
         }
