@@ -69,9 +69,8 @@ header{
 
 section{
     margin:auto;
-    min-height:100vh;
     height:100%;
-    padding:100px 0 0 0;
+    padding:100px 0 100px 0;
     width:100%;
     max-width: 1100px;
     justify-content: center;
@@ -241,16 +240,21 @@ left: 50%;
 
 /* Titel */
 #title-wrapper {
+    display: grid;
     justify-self: center;
     align-self: center;
+   justify-items: center;
 }
 
-#title {
-    display: flex;
+.title-logo {
+    width:60%;
+    height:auto;
+
 }
 
-.letter{
-
+img.letsfaceit{
+    height: auto;
+    width:40%;
 }
 
 #spacing {
@@ -259,7 +263,7 @@ left: 50%;
 
 #forside-pil-ned{
     /*margin: -200px auto 0 auto;*/
-    margin:-25% auto 0 auto;
+    margin:-5% auto 0 auto;
 }
 
 #forside-pil-ned a{
@@ -272,10 +276,19 @@ left: 50%;
 
 @keyframes jump { 0% { top: 0; } 50% { top: 50px; } 100% { top: 0; } }
 
+.paper-rip{
+    width:100%;
+    height:100%;
+    background-image: url('img/paper-rip.png');
+    background-position: bottom;
+    position: absolute;
+    bottom:-100px;
+    left:0;
+}
+
 .anchor-link{
     position: absolute;
     margin-top:-100px;
-    margin-bottom:100px;
 }
 
 .heading{
