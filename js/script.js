@@ -55,16 +55,20 @@ document.addEventListener("DOMContentLoaded", function() {
             var header = document.getElementsByTagName('header')[0],
                 section = document.getElementById('fp-section'),
                 vh = window.innerHeight,
-                st = document.documentElement.scrollTop;
-            if(st < 82){
+                // Chrome bruger documentElement
+                dst = document.documentElement.scrollTop;
+                // Safari bruger body
+                bst = document.body.scrollTop;
+                
+            if(dst < 82 || bst < 82){
                 header.style.top = "0px";
                 //header.style.display = "none";
             }
-            if(st > 82 && st < section.offsetHeight){
+            if(dst > 82  && dst < section.offsetHeight || bst > 82 && bst < section.offsetHeight){
                 header.style.top = "-82px";
                 //header.style.display = "block";
             }
-            if (st > section.offsetHeight){
+            if (dst > section.offsetHeight || bst > section.offsetHeight){
                 header.style.top = "0px";
                 header.style.position = "fixed";
             }
