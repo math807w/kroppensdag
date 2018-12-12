@@ -10,10 +10,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
-<style>
-
-</style>
-
 <body>
 
 <!-------------------- Navigations Bar -------------------->
@@ -44,27 +40,28 @@
 </header>
 
 <!-------------------- Forside --------------------> 
-    
-<section id="fp-section">
-    <a id="home" class="anchor-link"></a>
-    <div id="title-wrapper">
-        <h1 id="title">
-           KROPPENS DAG
-        </h1>
-        <h2>#LetsFaceIt</h2>
-    </div>
-        <div id="button-wrapper">
+<div id="parallax-scene">
+    <section id="fp-section">
+        <a id="home" class="anchor-link"></a>
+        <div id="title-wrapper">
+            <img src="img/logo.png">
+            <h2>#LetsFaceIt</h2>
+            <div id="button-wrapper">
                 <a class="btn btn-full" href="https://www.facebook.com/Kroppens-Dag-372914183281217/" target="_blank">Facebook</a>
                 <a class="btn" href="https://www.instagram.com/?hl=da" target="_blank">Instagram</a>
             </div>
-    <div id="forside-pil-ned">
-        <a href="#om"><i class="fa fa-chevron-down"></i></a>
-    </div>
-</section>
+        </div>
+            
+        <div id="forside-pil-ned">
+            <a href="#om"><i class="fa fa-chevron-down"></i></a>
+        </div>
+    </section>
+</div>
 
 <!-------------------- Om --------------------> 
-<div class="bggradient">
 <main>
+<div class="lightblue-bg">
+
 <section>
     <a id="om" class="anchor-link"></a>
     <div class="text-block">
@@ -85,8 +82,10 @@
     </div>
 </section>
 
-<!-------------------- Video --------------------> 
+</div>
 
+<!-------------------- Video --------------------> 
+<div class="darkblue-bg">
 <section style="background-color:none;">
     <a id="video" class="anchor-link"></a>
     <div class="heading">
@@ -101,9 +100,10 @@
                   
     </div>
 </section>
+</div>
 
 <!-------------------- Speakers --------------------> 
-
+<div class="lightblue-bg">
 <section style="background-color:none;">
     <a id="speakers" class="anchor-link"></a>
     <div class="heading">
@@ -116,7 +116,9 @@
                 <h3>Søren Østergaard</h3>
                 <h4>Center for Ungdomsforskning</h4>
             </div>
-            <div class="speaker-text"></div>
+            <div class="speaker-text">
+                <a href=""></a>
+            </div>
         </div>
         <div class="speaker">
             <div class="speaker-img img2"></div>
@@ -124,7 +126,11 @@
                 <h3>Anne Sophie Warberg Hækkerup</h3>
                 <h4>Gymnasieelev</h4>
             </div>
-            <div class="speaker-text"></div>
+            <div class="speaker-text">
+                <a href="https://politiken.dk/debat/debatindlaeg/art5717984/Jeg-ville-ønske-at-jeg-også-turde-gå-i-bad" target="_blank">
+                <p>Værd at læse</p>
+                </a>
+            </div>
         </div>
         <div class="speaker">
             <div class="speaker-img img3"></div>
@@ -132,14 +138,17 @@
                 <h3>Mikkel Salling Holmgaard</h3>
                 <h4>Strongmind</h4>
             </div>
-            <div class="speaker-text"></div>
+            <div class="speaker-text">
+                
+            </div>
         </div>
     </div>
 </section>
-
+</div>
 <!-------------------- Program  --------------------> 
 
-<section style="background-color:none;">
+<div class="darkblue-bg">
+<section>
     <a id="program" class="anchor-link"></a>
     <div class="heading">
         <h2>Program</h2>
@@ -159,7 +168,6 @@
         <div><p><span class="tidspunkt">Kl. 16.00</span><br> Sangworkshop ved Janne Wind</p></div>
         <div><p><span class="tidspunkt">Kl. 16.30</span><br> Glædes koncert med de sange vi har lært på 30 min</p></div>
         <div><p><span class="tidspunkt">Kl. 17.00</span><br> Afslutning og tak for timerne sammen</p></div>
-        <div></div>
     </div>
     <!--
     <p class="program"> <br> Kl. 10.00: Åbning og velkomst v./Studenterpræst Kirstine Hansen <br><br>
@@ -180,15 +188,17 @@
     </p>
 -->
 </section>
-
-<footer>
-    <p class="footerp">Odense Domkirke <br>
-            Adresse: Klosterbakken 2, 5000 Odense C <br>
-            5. April - 2018 kl. 10:00 - 17:00. 
-            </p>
-</footer>
+</div>
 
 </div>
 </main>
+<footer>
+    <p class="footerp"><strong>Odense Domkirke</strong><br>
+            Klosterbakken 2, 5000 Odense C <br>
+            5. April - 2018 kl. 10:00 - 17:00. 
+    </p>
+</footer>
+
+
 </body>
 </html>

@@ -30,10 +30,12 @@ document.addEventListener("DOMContentLoaded", function() {
     var bm = document.getElementById('burger-menu');
 
     bm.onclick = function(){
-        var nav = document.getElementById('nav');
+        var nav = document.getElementById('nav'),
+            h = document.getElementById('header');
         bm.classList.toggle("open");
         if(bm.classList.contains("open")){
             nav.style.display = "block";
+            h.style.backgroundColor = "#445763";
             setTimeout(
                 function(){
                     nav.style.opacity = 1;
@@ -41,9 +43,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         else if (bm.classList.contains("open") == false){
             nav.style.opacity = 0;
+            h.style.backgroundColor = "transparent";
             setTimeout(
                 function(){
                     nav.style.display = "none";
+                    
                 }, 250);
         }
     } 
@@ -67,25 +71,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Finder ud af, hvor mange pixels der er blevet scrollet fra top. Safari bruger document.body
                 bst = document.body.scrollTop;
 
-            // Tjekker om scroll-afstanden fra top er højere end headerens højde (82px)
-            if(dst < header.offsetHeight || bst < header.offsetHeight){
-                // Sætter headerens afstand fra top til 0.
-                header.style.top = "0px";
-                header.style.position = "absolute";
-                /*header.style.display = "none";*/
-            }
-            // Tjekker om scroll-afstanden fra top er større end headerens højde, men mindre end forside-sektionens højde
-            if(dst > header.offsetHeight  && dst < section.offsetHeight || bst > header.offsetHeight && bst < section.offsetHeight){
-                // Sætter headerens afstand fra top - til minus headerens egen størrelse (-82px)
-                header.style.top = "-" + header.offsetHeight + "px";
-                /*header.style.display = "block";*/
-            }
             // Tjekker om scroll-afstanden er større end forside-sektionens højde
-            if (dst > section.offsetHeight || bst > section.offsetHeight){
+            if (dst >= section.offsetHeight || bst >= section.offsetHeight){
                 // Sætter headerens afstand fra top til 0.
                 header.style.top = "0px";
                 // Sætter headerens position til fixed.
                 header.style.position = "fixed";
+            }
+            else if(dst < section.offsetHeight || bst < section.offsetHeight){
+                header.style.top = "-" + header.offsetHeight + "px";
             }
         }
 });
