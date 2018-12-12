@@ -367,6 +367,7 @@ left: 50%;
     background: #fff;
     height:100%;
     padding:12px 24px;
+    font-size: 1em;
 }
 
 
@@ -491,10 +492,37 @@ input[type=submit]:active {
     position:fixed;
     bottom:0px;
     right:-352px;
-    background:  #445763;
+    /*background:  #445763;*/
     padding-top: 64px;
-    width:300px;
+    width:auto;
     height:200px;
     font-size: 1.1em;
+    text-align: right;
+}
+
+#peekaboo a{
+    float:left;
+    
+}
+
+#peekaboo a:first-of-type{
+    margin-bottom:12px;
+}
+
+#peekaboo i{
+    float:left;
+    margin-right:10px;
+    box-sizing: border-box;
+    padding:5px;
+    height:30px;
+    width:30px;
+    text-align: center;
+    border-radius: 2px;
+    background: #f6f6f6;
+    color:#36454F;
+}
+
+#peekaboo a:hover p{
+    text-decoration: underline;
 }
 
