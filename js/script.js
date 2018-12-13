@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } 
     
 /* -------------------- Sticky header -------------------- */
+
     // Lytter efter scroll og hvis der bliver scrollet, kører den function der hedder fixedHeader
     document.addEventListener('scroll', fixedHeader);
 
@@ -83,7 +84,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 header.style.top = "-" + header.offsetHeight + "px";
             }
         }
-        /* -------------------- PEEKABOO -------------------- */
+
+/* -------------------- PEEKABOO -------------------- */
 
     function yScrollHandler(){
         var win = document.getElementById("peekaboo");
@@ -98,8 +100,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     window.onscroll = yScrollHandler;
 
+/* -------------------- Intro parallax animation -------------------- */
 
-        /* -------------------- Intro parallax animation -------------------- */
     function introAnimation(){
         var paper = document.getElementsByClassName('paper-rip')[0],
         tw = document.getElementById('title-wrapper');
