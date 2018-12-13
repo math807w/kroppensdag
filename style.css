@@ -155,6 +155,10 @@ section{
 #burger-menu-icon-wrapper{
     justify-self: end;
     grid-column: 3;
+    padding:10px;
+    margin-right:-10px;
+    cursor: pointer;
+
 }
 
 #burger-menu {
@@ -162,7 +166,7 @@ width: 40px;
 height: 24px;
 position: relative;
 margin: 0 auto;
-cursor: pointer;
+
 }
 
 #burger-menu span {
@@ -230,6 +234,34 @@ left: 50%;
     background-attachment: fixed;
 }
 
+.paper-rip{
+    width:100%;
+    max-width:100%;
+    height:400px;
+    background-image: url('img/paper-rip.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+    transition: height 2s ease-in-out;
+}
+
+#paper-rip-footer{
+    width:100%;
+    max-width:100%;
+    height:130px;
+    background-image: url('img/paper-rip.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    bottom:100px;
+    left:0;
+    transition: height 2s ease-in-out;
+}
+
 .darkblue-bg {
     background: #36454F;
 
@@ -243,13 +275,14 @@ left: 50%;
     display: grid;
     justify-self: center;
     align-self: center;
-   justify-items: center;
+    justify-items: center;
+    margin-bottom:-700px;
+    transition: margin-bottom 2s ease-in-out;
 }
 
 .title-logo {
     width:60%;
     height:auto;
-
 }
 
 img.letsfaceit{
@@ -276,15 +309,6 @@ img.letsfaceit{
 
 @keyframes jump { 0% { top: 0; } 50% { top: 50px; } 100% { top: 0; } }
 
-.paper-rip{
-    width:100%;
-    height:100%;
-    background-image: url('img/paper-rip.png');
-    background-position: bottom;
-    position: absolute;
-    bottom:-100px;
-    left:0;
-}
 
 .anchor-link{
     position: absolute;
@@ -346,7 +370,9 @@ img.letsfaceit{
 .speaker-img{
     height:200px;
     width:100%;
-    background: #fff;
+}
+
+.speaker-img:hover{
 }
 
 .img1 {
@@ -370,23 +396,37 @@ img.letsfaceit{
 }
 
 .speaker-text{
+    box-sizing: border-box;
     margin-top:16px;
     width:100%;
+}
 
+.speaker-text a{
+    width:100%;
+    height:100%;
 }
 
 .speaker-text p{
     color: #36454F;
     background: #fff;
-    height:100%;
-    padding:12px 24px;
+
+    padding:12px 0px;
     font-size: 1em;
+    border:1px solid transparent;
+    transition: border .2s, background-color .2s, color .2s;
 }
 
+.speaker-text:hover p{
+border:1px solid #fff;
+color: #fff;
+background: #445763;
 
-.speaker-text a{
-    
 }
+
+.speaker-text:hover{
+    background: #445763;
+}
+
 
 /*-------------------- Program --------------------*/
 
@@ -446,6 +486,7 @@ footer {
     padding: 64px 10%;
     height:200px;
     width:100%;
+    margin-top:-100px;
     background: #445763;
 }
 
@@ -458,40 +499,42 @@ footer p {
 /*-------------------- Forside Knapper --------------------*/
 
 .btn:link,
-.btn:visited,
-input[type=submit]{
+.btn:visited{
     display: inline-block;
     padding: 10px 30px;
     width: 100px;
     font-weight: 300;
     text-decoration: none;
-    background-color:#3B5998;
-    border-radius: 200px;
+    border-radius: 50px;
     color: #fff;
-    transition: background-color 0.2s, border 0.2s;
+    transition: border 0.2s;
     text-align: center;  
+    border:1px solid #fff;
 }
 
 #button-wrapper{
     display: flex;
     justify-content: center;
-    margin-top:16px;
+    margin-top:32px;
 
 }
-
     
-.btn-full {
+.btn-face {
     margin-right: 20px;
+    background:#445763;
+
+}
+.btn-face:hover{
+    background: #324b80;
     
 }
+.btn-instagram{
+    background-color:#445763;
 
-
-.btn:hover,
-.btn:active, 
-input[type=submit]:hover,
-input[type=submit]:active {
-    background-color: #324b80;
-    
+}
+.btn-instagram:hover{
+    background-image: url('img/instagram-bg.png');
+    background-size: cover;
 }
 
 .btn i {
@@ -502,15 +545,14 @@ input[type=submit]:active {
 
 #peekaboo{
     box-sizing: border-box;
-    position:fixed;
+    position: relative;
     bottom:0px;
     right:-352px;
     /*background:  #445763;*/
-    padding-top: 64px;
     width:auto;
-    height:200px;
     font-size: 1.1em;
     text-align: right;
+    float:right;
 }
 
 #peekaboo a{
