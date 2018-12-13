@@ -92,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function() {
         win.style.transition = "right 0.7s ease-in-out 0s";
         win.style.right = "0";
         } /*else {
-            
         win.style.transition = "right 0.7s ease-in-out 0s";
         win.style.right = "-452px";
         }*/

@@ -281,13 +281,15 @@ left: 50%;
 }
 
 .title-logo {
-    width:60%;
+    width:50vw;
     height:auto;
+    max-width:800px;
 }
 
 img.letsfaceit{
     height: auto;
-    width:40%;
+    width:35vw;
+    max-width:800px;
 }
 
 #spacing {
@@ -370,6 +372,7 @@ img.letsfaceit{
 .speaker-img{
     height:200px;
     width:100%;
+    background-position: center;
 }
 
 .speaker-img:hover{
