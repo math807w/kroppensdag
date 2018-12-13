@@ -281,13 +281,15 @@ left: 50%;
 }
 
 .title-logo {
-    width:60%;
+    width:50vw;
     height:auto;
+    max-width:800px;
 }
 
 img.letsfaceit{
     height: auto;
-    width:40%;
+    width:35vw;
+    max-width:600px;
 }
 
 #spacing {
