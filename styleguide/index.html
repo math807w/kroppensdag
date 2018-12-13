@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Styleguide</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="../js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+ <header id="header" style="top:0; position:fixed;">
+    <div id="header-content">
+        <a href="#home">
+            <div id="logo">
+                <img src="../img/kroppensdag.svg" alt="Kroppens Dag Logo" />
+            </div>
+        </a>
+        <nav id="nav">
+            <ul>
+                <li><a href="#farver" class="menu-link">UI Farver</a></li>
+                <li><a href="#typografi" class="menu-link">Typografi</a></li>
+                <li><a href="#ikoner" class="menu-link">Ikoner</a></li>
+                <li><a href="#knapper" class="menu-link">Knapper</a></li>
+                <li><a href="#templates" class="menu-link">Templates</a></li>
+            </ul>
+        </nav>
+        <div id="burger-menu-icon-wrapper">
+            <div id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>     
+        </div>
+    </div>
+</header>
+
+<div class="lightblue-bg">
+    <section>
+        <a id="om" class="anchor-link"></a>
+        <div class="text-block">
+            <div class="heading">
+                <h2><em>Styleguide for</em><br>Kroppens dag</h2>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="darkblue-bg">
+    <section>
+        <a id="farver" class="anchor-link"></a>
+        <div class="heading">
+            <h2>UI Farver</h2>
+        </div>
+        <div class="farver">
+            <div class="color c1">#445763</div>
+            <div class="color c2">#F6F6F6</div>
+            <div class="color c3">#36454F</div>
+            <div class="color c4">#EC0092</div>
+      </div>
+      <div class="code">
+          <code>
+            <strong>/* Farver */</strong><br><br>
+            .darkblue{<br>
+              color: #445763;<br>
+            }<br><br>
+            .lightblue{<br>
+              color: #36454F;<br>
+            } <br><br>
+            .white{<br>
+              color: #f6f6f6;<br>
+            }<br><br>
+            .pink{<br>
+              color: #EC0092;<br>
+            }
+          </code>
+      </div>
+      
+    </section>
+</div>
+
+<div class="lightblue-bg">
+    <section>
+        <a id="typografi" class="anchor-link"></a>
+        <div class="heading">
+            <h2>Typografi</h2>
+        </div>
+        <div class="text-block">
+            <p>Den typografi vi har valgt er med til at gøre designet på siden nem og overskuelig. Tekstblokke har en maks bredde på 550px for at give bedre læsevenlighed. </p>
+          </div>        
+          <div class="code">
+            <code>
+              <strong>/* Overskrifter */</strong><br><br>
+              h2{<br>
+                color:#f6f6f6;<br>
+                font-size: 3em;<br>
+                text-align: center;<br>
+              }<br><br>
+              .heading{<br>
+                text-align: center;<br>
+                margin-bottom:32px;<br>
+            }
+            </code>
+        </div>
+        <div class="code">
+            <code>
+              <strong>/* Brødtekst */</strong><br><br>
+              .text-block p{<br>
+                max-width:550px;<br>
+                margin:auto;<br>
+              }<br><br>
+              p{<br>
+                color:#f6f6f6;<br>
+                font-size: 1.3em;<br>
+                line-height: 1.3em;<br>
+                text-align: center;<br>
+            }
+            </code>
+        </div>
+    </section>
+</div>
+
+<div class="darkblue-bg">
+    <section>
+        <a id="ikoner" class="anchor-link"></a>
+        <div class="heading">
+            <h2>Ikoner</h2>
+        </div>
+        <div class="text-block">
+          <p>Der bruges forskellige ikoner i forskellige forbindelser på siderne. De ser ud som følgende:</p>
+          <div class="icons">
+          <i class="fa fa-chevron-down"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+        <div class="code">
+            <code>
+              <strong>/* Ikoner */</strong><br><br>
+              &lt;head&gt;<br>
+              &lt;link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"&gt;
+              <br>
+              &lt;/head&gt;<br><br>
+              &lt;div class="icons"&gt;<br>
+              &nbsp;&lt;i class="fab fa-chevron-down"&gt;&lt;/i&gt;<br>
+              &nbsp;&lt;i class="fab fa-facebook-f"&gt;&lt;/i&gt;<br>
+              &nbsp;&lt;i class="fab fa-instagram"&gt;&lt;/i&gt;<br>
+              &lt;/div&gt;<br><br>
+              .icons{<br>
+              }<br><br>
+              .icons i{<br>
+                font-size: 1em;<br>
+                color: #f6f6f6;<br>
+                text-align: center;<br>
+            }
+            </code>
+        </div>
+    </section>
+</div>
+
+ <div class="lightblue-bg">
+   <section>
+    <a id="knapper" class="anchor-link"></a>
+     <div class="heading">
+        <h2>Knapper</h2>
+     </div>
+     <div class="text-block">
+        <p>Knapperne kommer forskelligt. <br>Vi har to C2A knapper på forsiden: 
+        </p>
+     </div>
+     <div id="button-wrapper">
+        <a class="btn btn-face" href="https://www.facebook.com/Kroppens-Dag-372914183281217/" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a>
+        <a class="btn btn-instagram" href="https://www.instagram.com/?hl=da" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+    </div>
+    <div class="code">
+        <code>
+          <strong>/* Knapper */</strong><br><br>
+          .btn:link,<br>
+          .btn:visited{<br>
+              display: inline-block;<br>
+              padding: 10px 30px;<br>
+              min-width: 100px;<br>
+              font-weight: 300;<br>
+              text-decoration: none;<br>
+              border-radius: 50px;<br>
+              color: #fff;<br>
+              transition: border 0.2s;<br>
+              text-align: center;<br>
+              border:1px solid #fff;<br>
+          }<br><br>
+
+          #button-wrapper{<br>
+              display: flex;<br>
+              justify-content: center;<br>
+              margin-top:32px;<br>
+          }<br><br>
+
+          .btn i{<br>
+            margin-right: 10px;<br>
+          }<br><br>
+              
+          .btn-face{<br>
+              margin-right: 20px;<br>
+              background:#445763;<br>
+          }<br><br>
+
+          .btn-face:hover{<br>
+              background: #324b80;   <br>
+          }<br><br>
+
+          .btn-instagram{<br>
+              background-color:#445763;<br>
+          }<br><br>
+
+          .btn-instagram:hover{<br>
+              background-image: url('img/instagram-bg.png');<br>
+              background-size: cover;<br>
+          }<br>
+        </code>
+    </div>
+    </section>
+</div>
+
+  <div class="darkblue-bg">
+      <section>
+          <a id="templates" class="anchor-link"></a>
+          <div class="heading">
+              <h2>Templates</h2>
+          </div>
+          <div class="text-block">
+            <p>Der bruges forskellige forskellige templates på siden. Et bliver brugt til opsætningen af foredragsholdere, og et andet til opsætningen af programmet.</p>
+          </div>
+      </section>
+  </div>
+
+  <div class="lightblue-bg">
+      <section style="background-color:none;">
+          <a id="speakers" class="anchor-link"></a>
+          <div class="heading">
+              <h2>Template 1: Foredragsholdere</h2>
+          </div>
+          <div class="speakers-grid">
+                  <div class="speaker">
+                      <div class="speaker-img img1"></div>
+                      <div class="speaker-name">
+                          <h3>Søren Østergaard</h3>
+                          <h4>Center for Ungdomsforskning</h4>
+                      </div>
+                      <div class="speaker-text">
+                          <a href="https://www.athenas.dk/soeren-oestergaard-foredrag-boern-unge-foreningsliv.htm" target="_blank">
+                              <p>Læs mere på Athenas</p>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="speaker">
+                      <div class="speaker-img img2"></div>
+                      <div class="speaker-name">
+                          <h3>Anne Sophie Warberg Hækkerup</h3>
+                          <h4>Student</h4>
+                      </div>
+                      <div class="speaker-text">
+                          <a href="https://politiken.dk/debat/debatindlaeg/art5717984/Jeg-ville-ønske-at-jeg-også-turde-gå-i-bad" target="_blank">
+                              <p>Læs artiklen på Politiken</p>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="speaker">
+                      <div class="speaker-img img3"></div>
+                      <div class="speaker-name">
+                          <h3>Mikkel Salling Holmgaard</h3>
+                          <h4>Strongmind</h4>
+                      </div>
+                      <div class="speaker-text">
+                          <a href="https://www.strongmind.dk/Mikkel-Salling-Holmgaard" target="_blank">
+                              <p>Læs mere på Strongmind</p>
+                          </a>
+                      </div>
+                  </div>
+          </div>
+          <div class="code">
+              <code>
+                <strong>/* Foredragsholdere */</strong><br><br>
+                .speakers-wrapper{<br>
+                  height:100%;<br>
+                  width:100%;<br>
+                  max-width:1100px;<br>
+              }<br><br>
+              
+              .speakers-grid{<br>
+                  display: grid;<br>
+                  grid-template-columns: repeat(3, 1fr);<br>
+                  grid-gap: 5%;<br>
+              }<br><br>
+              
+              .speaker{<br>
+                  height:100%;<br>
+                  width:100%;<br>
+                  box-sizing: border-box;<br>
+                  padding:5% 5% 10% 5%;<br>
+                  background-color: #36454F;<br>
+                  border-radius: 2px;<br>
+              }<br><br>
+              
+              .speaker-img{<br>
+                  height:200px;<br>
+                  width:100%;<br>
+              }<br><br>
+              
+              .img1{<br>
+                  background-image: url(img/søren.jpg);<br>
+                  background-size: cover;<br>
+              }<br><br>
+              
+              .img2{<br>
+                  background-image: url(img/sophie.jpg);<br>
+                  background-size: cover;<br>
+              }<br><br>
+              
+              .img3{<br>
+                  background-image: url(img/mikkel.jpg);<br>
+                  background-size: cover;<br>
+              }<br><br>
+              
+              .speaker-name{<br>
+                  color:#f6f6f6;<br>
+                  margin-top:16px;<br>
+                  line-height: 1.6em;<br>
+              }<br><br>
+              
+              .speaker-text{<br>
+                  box-sizing: border-box;<br>
+                  margin-top:16px;<br>
+                  width:100%;<br>
+              }<br><br>
+              
+              .speaker-text a{<br>
+                  width:100%;<br>
+                  height:100%;<br>
+              }<br><br>
+              
+              .speaker-text p{<br>
+                  color: #36454F;<br>
+                  background: #fff;<br>
+                  padding:12px 0px;<br>
+                  font-size: 1em;<br>
+                  border:1px solid transparent;<br>
+                  transition: border .2s, background-color .2s, color .2s;<br>
+              }<br><br>
+              
+              .speaker-text:hover p{<br>
+              border:1px solid #fff;<br>
+              color: #fff;<br>
+              background: #445763;<br>
+              }<br><br>
+              
+              .speaker-text:hover{<br>
+                  background: #445763;<br>
+              }<br><br>
+              
+              </code>
+          </div>
+      </section>
+    </div>
+
+      <div class="darkblue-bg">
+          <section id="program-grid">
+              <a id="program" class="anchor-link"></a>
+              <div class="heading">
+                  <h2>Template 2: Program</h2>
+              </div>
+              <div class="program-grid">
+                  <div class="col1-2"><p><span class="tidspunkt">Kl. 10.00</span><br> Åbning og velkomst<br> v/Studenterpræst Kirstine Hansen</p></div>
+                  <div><p><span class="tidspunkt">Kl. 10.15</span><br> Foredrag/oplæg<br> v/ Søren Østergaard, <br>Center for Ungdomsforskning</p></div>
+                  <div><p><span class="tidspunkt">Kl. 11.00</span><br> Debatpanelet med Søren Østergaard, Sofie Warberg Hækkerup, (Mikkel Salling Holmgaard fra Strongmind)
+              </div>
+          </section>
+          <div class="code" id="prg-code">
+              <code>
+                <strong>/* Program */</strong><br><br>
+                .program-grid{<br>
+                  display: grid;<br>
+                  grid-template-columns: 1fr 1fr;<br>
+                  grid-template-rows: repeat(7, 1fr);<br>
+                  grid-auto-columns: auto;<br>
+                  grid-column-gap: 2%;<br>
+              }<br><br>
+              
+              .col1-2{<br>
+                  grid-row: 1;<br>
+                  grid-column-start: 1;<br>
+                  grid-column-end: 3;<br>
+                  display: flex;<br>
+                  width:50%;<br>
+                  justify-self: center;<br>
+                  margin-bottom:64px;<br>
+              }<br><br>
+              
+              .program-grid div{<br>
+                  box-sizing: border-box;<br>
+                  display: flex;<br>
+                  width:100%;<br>
+                  height:250px;<br>
+                  padding:5%;<br>
+                  align-items: center;<br>
+              }<br><br>
+              
+              .program-grid div:nth-child(1), <br>
+              .program-grid div:nth-child(2), <br>
+              .program-grid div:nth-child(5), <br>
+              .program-grid div:nth-child(6), <br>
+              .program-grid div:nth-child(9), <br>
+              .program-grid div:nth-child(10), <br>
+              .program-grid div:nth-child(13){<br>
+                  background-color: #445763;<br>
+              }<br><br>
+              
+              .program-grid p{<br>
+                  text-align: center;<br>
+                  margin:auto;<br>
+              }<br><br>
+              
+              .tidspunkt{<br>
+                  font-weight: bold;<br>
+                  font-size:1.4em;<br>
+              }<br><br>
+              
+              .program{<br>
+                  text-align: left;<br>
+              }
+              </code>
+          </div>
+          </div>
+                  
+
+</body>
+</html>

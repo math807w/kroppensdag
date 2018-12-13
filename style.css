@@ -1,11 +1,560 @@
-@media screen and (max-width: 992px) {
-
+@media screen and (max-width: 992px){
 }
 
-/* Farver */
+/* -------------------- Farver -------------------- */
+
 /*
-Farve: #fff
+Mørkeblå: #36454F
+Lysblå: #445763
+Hvid: #F6F6F6
+Gul: #F1C40F
 */
 
+/* -------------------- Generelt -------------------- */
 
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: "Lato";
+    background:  #36454F;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+p{
+    color:#f6f6f6;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Lato";
+    font-size: 6em;
+    font-weight: 600;
+    color: #fff; 
+}
+
+h2{
+    color:#f6f6f6;
+    font-size: 3em;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+    width:100%;
+    box-sizing: border-box;
+    position: absolute;
+    top:-82px;
+    left:0;
+    align-content: center;
+    z-index:999;
+    transition: top .2s, background-color .2s;
+}
+
+section{
+    margin:auto;
+    height:100%;
+    padding:100px 0 100px 0;
+    width:100%;
+    max-width: 1100px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#fp-section{
+    padding:0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 9fr 1fr;
+    margin:auto;
+}
+
+/* -------------------- Header -------------------- */
+
+#header-content{
+    width:80%;
+    max-width: 1100px;
+    padding:16px 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    margin:auto;
+    align-items: center;
+}
+
+#logo{
+    height:50px;
+    justify-self: flex-start;
+}
+
+#logo img{
+    height:50px;
+    width:auto;
+}
+
+#logo a{
+    width:100%;
+    height:100%;
+}
+
+/* -------------------- Navigations Menu -------------------- */
+
+#nav{
+    color:#f6f6f6;
+    opacity: 0;
+    transition: opacity .25s;
+    grid-column: 2;
+    justify-self: center;
+    display: none;
+}
+
+#nav ul{
+    list-style-type: none;  
+}
+
+#nav ul li{
+    float: left;
+    margin-right:10px;
+}
+
+#nav ul li:last-of-type{
+    margin-right:0px;
+}
+#nav ul li a{
+    height:100%;
+    width:100%;
+    padding:10px 10px;
+    color:#f6f6f6;
+    font-size: 1.2em;
+}
+
+#nav ul li :hover{
+    text-decoration: underline;
+}
+
+/* -------------------- Burger Menu -------------------- */
+
+#burger-menu-icon-wrapper{
+    justify-self: end;
+    grid-column: 3;
+    padding:10px;
+    margin-right:-10px;
+    cursor: pointer;
+}
+
+#burger-menu{
+width: 40px;
+height: 24px;
+position: relative;
+margin: 0 auto;
+}
+
+#burger-menu span{
+display: block;
+position: absolute;
+height: 3px;
+width: 100%;
+background: #f6f6f6;
+border-radius: 9px;
+left: 0;
+-webkit-transition: .25s ease-in-out;
+-moz-transition: .25s ease-in-out;
+-o-transition: .25s ease-in-out;
+transition: .25s ease-in-out;
+}
+
+#burger-menu span:nth-child(1){
+top: 0px;
+}
+
+#burger-menu span:nth-child(2),#burger-menu span:nth-child(3){
+top: 10px;
+}
+
+#burger-menu span:nth-child(4){
+top: 20px;
+}
+
+#burger-menu.open span:nth-child(1){
+top: 18px;
+width: 0%;
+left: 50%;
+}
+
+#burger-menu.open span:nth-child(2){
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+
+#burger-menu.open span:nth-child(3){
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}
+
+#burger-menu.open span:nth-child(4){
+top: 18px;
+width: 0%;
+left: 50%;
+}
+
+/* -------------------- Forside -------------------- */
+
+#parallax-scene{
+    background-image: url('img/para-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.paper-rip{
+    width:100%;
+    max-width:100%;
+    height:400px;
+    background-image: url('img/paper-rip.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+    transition: height 2s ease-in-out;
+}
+
+.darkblue-bg{
+    background: #36454F;
+ }
+
+ .lightblue-bg{
+    background: #445763;
+ }
+
+#title-wrapper{
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    justify-items: center;
+    margin-bottom:-700px;
+    transition: margin-bottom 2s ease-in-out;
+}
+
+.title-logo{
+    width:50vw;
+    height:auto;
+    max-width:800px;
+}
+
+img.letsfaceit{
+    height: auto;
+    width:35vw;
+    max-width:600px;
+}
+
+#spacing{
+    margin-right: 3vw;
+}
+
+#forside-pil-ned{
+    margin:-5% auto 0 auto;
+}
+
+#forside-pil-ned a{
+    color: #f6f6f6;
+    justify-self: center;
+    font-size: 3em;
+    position: relative;
+    animation: jump 1.5s infinite ease-in-out;
+}
+
+@keyframes jump { 0% { top: 0; } 50% { top: 50px; } 100% { top: 0; } }
+
+.anchor-link{
+    position: absolute;
+    margin-top:-100px;
+}
+
+.heading{
+    text-align: center;    
+    margin-bottom:32px;
+}
+
+/* -------------------- Om -------------------- */
+
+.text-block p{
+    max-width:550px;
+    margin:auto;
+}
+
+/* -------------------- Video -------------------- */
+
+.video-wrapper{
+    height:auto;
+    max-width:1100px;
+    max-height:550px;
+    border:1px solid white;
+}
+
+.video-wrapper video{
+    width:100%;
+    max-width: 1100px;
+}
+
+/* -------------------- Speakers -------------------- */
+
+.speakers-wrapper{
+    height:100%;
+    width:100%;
+    max-width:1100px;
+}
+
+.speakers-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5%;
+}
+
+.speaker{
+    height:100%;
+    width:100%;
+    box-sizing: border-box;
+    padding:5% 5% 10% 5%;
+    background-color: #36454F;
+    border-radius: 2px;
+}
+
+.speaker-img{
+    height:200px;
+    width:100%;
+}
+
+.img1{
+    background-image: url(img/søren.jpg);
+    background-size: cover;
+}
+
+.img2{
+    background-image: url(img/sophie.jpg);
+    background-size: cover;
+}
+
+.img3{
+    background-image: url(img/mikkel.jpg);
+    background-size: cover;
+}
+
+.speaker-name{
+    color:#f6f6f6;
+    margin-top:16px;
+    line-height: 1.6em;
+}
+
+.speaker-text{
+    box-sizing: border-box;
+    margin-top:16px;
+    width:100%;
+}
+
+.speaker-text a{
+    width:100%;
+    height:100%;
+}
+
+.speaker-text p{
+    color: #36454F;
+    background: #fff;
+    padding:12px 0px;
+    font-size: 1em;
+    border:1px solid transparent;
+    transition: border .2s, background-color .2s, color .2s;
+}
+
+.speaker-text:hover p{
+border:1px solid #fff;
+color: #fff;
+background: #445763;
+}
+
+.speaker-text:hover{
+    background: #445763;
+}
+
+/*-------------------- Program --------------------*/
+
+.program-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-auto-columns: auto;
+    grid-column-gap: 2%;
+}
+
+.col1-2{
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    width:50%;
+    justify-self: center;
+    margin-bottom:64px;
+}
+
+.program-grid div{
+    box-sizing: border-box;
+    display: flex;
+    width:100%;
+    height:250px;
+    padding:5%;
+    align-items: center;
+}
+
+.program-grid div:nth-child(1), 
+.program-grid div:nth-child(2), 
+.program-grid div:nth-child(5), 
+.program-grid div:nth-child(6), 
+.program-grid div:nth-child(9), 
+.program-grid div:nth-child(10), 
+.program-grid div:nth-child(13){
+    background-color: #445763;
+}
+
+.program-grid p{
+    text-align: center;
+    margin:auto;
+}
+
+.tidspunkt{
+    font-weight: bold;
+    font-size:1.4em;
+}
+
+.program{
+    text-align: left;
+}
+
+/*-------------------- Footer --------------------*/
+
+footer{
+    float: left;
+    box-sizing: border-box;
+    padding: 64px 10%;
+    height:200px;
+    width:100%;
+    margin-top:-100px;
+    background: #445763;
+}
+
+footer p{
+    float: left;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+#paper-rip-footer{
+    width:100%;
+    max-width:100%;
+    height:130px;
+    background-image: url('img/paper-rip.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    bottom:100px;
+    left:0;
+    transition: height 2s ease-in-out;
+}
+
+/*-------------------- Forside Knapper --------------------*/
+
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    padding: 10px 30px;
+    min-width: 100px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 50px;
+    color: #fff;
+    transition: border 0.2s;
+    text-align: center;  
+    border:1px solid #fff;
+}
+
+.btn i{
+    margin-right: 10px;
+}
+
+#button-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top:32px;
+}
+    
+.btn-face{
+    margin-right: 20px;
+    background:#445763;
+}
+
+.btn-face:hover{
+    background: #324b80;   
+}
+
+.btn-instagram{
+    background-color:#445763;
+}
+
+.btn-instagram:hover{
+    background-image: url('img/instagram-bg.png');
+    background-size: cover;
+}
+
+/*-------------------- PEEKABOO CSS --------------------*/
+
+#peekaboo{
+    box-sizing: border-box;
+    bottom:0px;
+    right:-100vw;
+    width:auto;
+    font-size: 1.1em;
+    text-align: right;
+    float:right;
+    position: relative;
+    display: none;
+}
+
+#peekaboo a{
+    float:left;   
+}
+
+#peekaboo a:first-of-type{
+    margin-bottom:12px;
+}
+
+#peekaboo i{
+    float:left;
+    margin-right:10px;
+    box-sizing: border-box;
+    padding:5px;
+    height:30px;
+    width:30px;
+    text-align: center;
+    border-radius: 2px;
+    background: #f6f6f6;
+    color:#36454F;
+}
+
+#peekaboo a:hover p{
+    text-decoration: underline;
+}
 

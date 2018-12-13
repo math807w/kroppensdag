@@ -1,16 +1,215 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <title>Kroppens Dag | 5. april 2019</title>
+    <!-- SEO -->
+    <meta charset="UTF-8" />
+    <title>Kroppens Dag | 5. april 2019 | En hyldest til mangfoldigheden</title>
+    <meta name="description" content="Kroppens Dag er et heldags event hvor foredrag, debatter og andre aktiviteter, skal være med til at gøre op med idealer og den perfekte krop. #LetsFaceIt." />
+    <meta name="robots" content="index, nofollow">
+    <!-- SoMe Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kroppens Dag | 5. april 2019 | En hyldest til mangfoldigheden" />
+    <meta property="og:description" content="Kroppens Dag er et heldags event hvor foredrag, debatter og andre aktiviteter, skal være med til at gøre op med idealer og den perfekte krop. #LetsFaceIt." />
+    <meta property="og:url" content="https://www.kroppensdag.dk/" />
+    <meta property="og:image" content="http://mmd.mathiashammer.dk/kroppensdag/img/kroppensdag.png" />
+    <meta property="og:image:alt" content="Kroppens Dag Logo" />
+    <!-- Links & Scripts -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="js/script.js"></script>
     <script src="js/sticky.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
 
-</body>
+<!-------------------- Navigations Bar -------------------->
 
+<header id="header">
+    <div id="header-content">
+        <a href="#home">
+            <div id="logo">
+                <img src="img/kroppensdag.svg" alt="Kroppens Dag Logo"/>
+            </div>
+        </a>
+        <nav id="nav">
+            <ul>
+                <li><a href="#om" class="menu-link">Om dagen</a></li>
+                <li><a href="#video " class="menu-link">Video</a></li>
+                <li><a href="#speakers" class="menu-link">Speakers</a></li>
+                <li><a href="#program" class="menu-link">Program</a></li>
+            </ul>
+        </nav>
+        <div id="burger-menu-icon-wrapper">
+            <div id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-------------------- Forside -------------------->
+
+<div id="parallax-scene">
+    <section id="fp-section">
+        <a id="home" class="anchor-link"></a>
+        <div id="title-wrapper">
+            <img class="title-logo" src="img/kroppensdag.svg" alt="Kroppens Dag Logo"><br>
+            <img class="letsfaceit" src="img/letsfaceit.svg" alt="#LetsFaceIt Lets Face It Logo">
+            <div id="button-wrapper">
+                <a class="btn btn-face" href="https://www.facebook.com/Kroppens-Dag-372914183281217/" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a>
+                <a class="btn btn-instagram" href="https://www.instagram.com/?hl=da" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+            </div>
+        </div>
+
+        <div id="forside-pil-ned">
+            <a href="#om"><i class="fa fa-chevron-down"></i></a>
+        </div>
+        <div class="paper-rip"></div>
+    </section>
+</div>
+
+<!-------------------- Om -------------------->
+
+<main>
+<div class="lightblue-bg">
+
+<section>
+    <a id="om" class="anchor-link"></a>
+    <div class="text-block">
+        <div class="heading">
+            <h2>Hvad er Kroppens Dag?</h2>
+        </div>
+        <p>
+            #LETSFACEIT er lavet i samarbejdet med Kroppens Dag, som skal sætte fokus på unges opfattelse af dem selv og deres krop. Kroppens dag er et heldags event hvor foredrag, debatter og andre aktiviteter, skal være med til at gøre op, med idealer og “den perfekte krop”. <br><br>
+            Vi er generation perfekt.
+            Let's face it. <br><br>
+            Generationen hvor det unaturlige er naturligt, hvor godt ikke er godt nok, og hvor kroppen er blevet en central rolle for ens identitet.
+            Vi mødes konstant af medier, der sætter standarder for hvordan vi skal se ud, hvordan vi skal opføre os - og vi bliver hele tiden bedt om at skulle forholde os til andre og have en mening.
+            <br><br>Dette fører os til, at vi går i et konstant pres for andres meninger til en selv. Meninger som skaber usikkerhed og gør, at vi prøver at tilpasse os andre.
+            <br><br>
+            Vi kommer alle fra generation perfekt.
+        </p>
+    </div>
+</section>
+
+</div>
+
+<!-------------------- Video -------------------->
+
+<div class="darkblue-bg">
+<section style="background-color:none;">
+    <a id="video" class="anchor-link"></a>
+    <div class="heading">
+        <h2>#LetsFaceIt kampagnevideo</h2>
+    </div>
+    <div class="video-wrapper">
+        <video controls>
+            <source src="movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    </div>
+</section>
+</div>
+
+<!-------------------- Speakers -------------------->
+
+<div class="lightblue-bg">
+<section style="background-color:none;">
+    <a id="speakers" class="anchor-link"></a>
+    <div class="heading">
+        <h2>Foredragsholdere</h2>
+    </div>
+    <div class="speakers-grid">
+            <div class="speaker">
+                <div class="speaker-img img1"></div>
+                <div class="speaker-name">
+                    <h3>Søren Østergaard</h3>
+                    <h4>Center for Ungdomsforskning</h4>
+                </div>
+                <div class="speaker-text">
+                    <a href="https://www.athenas.dk/soeren-oestergaard-foredrag-boern-unge-foreningsliv.htm" target="_blank">
+                        <p>Læs mere på Athenas</p>
+                    </a>
+                </div>
+            </div>
+            <div class="speaker">
+                <div class="speaker-img img2"></div>
+                <div class="speaker-name">
+                    <h3>Anne Sophie Warberg Hækkerup</h3>
+                    <h4>Student</h4>
+                </div>
+                <div class="speaker-text">
+                    <a href="https://politiken.dk/debat/debatindlaeg/art5717984/Jeg-ville-ønske-at-jeg-også-turde-gå-i-bad" target="_blank">
+                        <p>Læs artiklen på Politiken</p>
+                    </a>
+                </div>
+            </div>
+            <div class="speaker">
+                <div class="speaker-img img3"></div>
+                <div class="speaker-name">
+                    <h3>Mikkel Salling Holmgaard</h3>
+                    <h4>Strongmind</h4>
+                </div>
+                <div class="speaker-text">
+                    <a href="https://www.strongmind.dk/Mikkel-Salling-Holmgaard" target="_blank">
+                        <p>Læs mere på Strongmind</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+</section>
+</div>
+
+<!-------------------- Program  -------------------->
+
+<div class="darkblue-bg">
+<section>
+    <a id="program" class="anchor-link"></a>
+    <div class="heading">
+        <h2>Program for Kroppens Dag</h2>
+    </div>
+    <div class="program-grid">
+        <div class="col1-2"><p><span class="tidspunkt">Kl. 10.00</span><br> Åbning og velkomst<br> v/Studenterpræst Kirstine Hansen</p></div>
+        <div><p><span class="tidspunkt">Kl. 10.15</span><br> Foredrag/oplæg<br> v/ Søren Østergaard, <br>Center for Ungdomsforskning</p></div>
+        <div><p><span class="tidspunkt">Kl. 11.00</span><br> Debatpanelet med Søren Østergaard, Sofie Warberg Hækkerup, (Mikkel Salling Holmgaard fra Strongmind)
+            En studerende og underviser fra UCL</p></div>
+        <div><p><span class="tidspunkt">Kl. 12.00</span><br> Bevægelse i kroppen dagens sang med Janne Wind</p></div>
+        <div><p><span class="tidspunkt">Kl. 12.10</span><br> Smagsprøver ved studerende fra Kold College</p></div>
+        <div><p><span class="tidspunkt">Kl. 12.30</span><br> Sang og undervisning om stemmen v. Janne Wind</p></div>
+        <div><p><span class="tidspunkt">Kl. 13.00</span><br> Oplæg om kroppen om kost, bevægelse, hvordan sker der i kroppen</p></div>
+        <div><p><span class="tidspunkt">Kl. 14.30</span><br> Pause og “besøg” i stationer i kirkerummet</p></div>
+        <div><p><span class="tidspunkt">Stationer</span><br> “Tanker til tørre”, “Filosofiske smuglere og andet godtfolk”, “Fotokunst”, “Chill out i Krypten”, “Store tanker i små sko”, “Mad med Glæde”</p></div>
+        <div><p><span class="tidspunkt">Kl. 15.15</span><br> Danseforestilling ved dansere fra Odense</p></div>
+        <div><p><span class="tidspunkt">Kl. 16.00</span><br> Sangworkshop ved Janne Wind</p></div>
+        <div><p><span class="tidspunkt">Kl. 16.30</span><br> Glædes koncert med de sange vi har lært på 30 min</p></div>
+        <div><p><span class="tidspunkt">Kl. 17.00</span><br> Afslutning og tak for timerne sammen</p></div>
+    </div>
+
+</section>
+</div>
+
+</main>
+
+<!-------------------- Footer -------------------->
+
+<div id="paper-rip-footer"></div>
+<footer>
+    <p class="footerp"><strong>Odense Domkirke</strong><br>
+            Klosterbakken 2, 5000 Odense C <br>
+            5. April 2018 | kl. 10:00 - 17:00
+    </p>
+    <div id="peekaboo">
+        <a href="https://www.facebook.com/Kroppens-Dag-372914183281217" target="_blank"><i class="fab fa-facebook-f"></i><p>Følg med på Facebook</p></a><br>
+        <a href="https://www.facebook.com/Kroppens-Dag-372914183281217" target="_blank"><i class="fab fa-instagram"></i><p>Følg med på Instagram</p></a>
+    </div>
+</footer>
+
+
+</body>
 </html>
