@@ -1,0 +1,161 @@
+/* ---------- GENERELT ---------- */
+
+*  {
+    box-sizing: border-box;
+
+}
+
+ html, body {
+    margin: 0 auto;
+ }
+
+ .code{
+     box-sizing: border-box;
+     min-width:400px;
+     height:auto;
+     background-color:#f6f6f6;
+     margin:64px auto 0 auto;
+     padding:32px;
+     box-shadow: 2px 2px 6px #000;
+     max-width: 600px;
+ }
+
+
+
+/* ---------- NAVBAR ---------- */
+
+
+  
+/* ---------- HEADER ---------- */
+
+.sektion1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/css/hero.jpg);
+    background-size: cover;
+    padding-bottom: 265px;
+    padding-top: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.paragraf1 {
+    text-align: center;
+    color: white;
+}
+
+/* ---------- UI Farver ---------- */
+
+.sektion2 {
+    margin-top: 50px;
+}
+
+h2 {
+
+}
+
+.paragraf2 {
+    text-align: center;
+    color: black;
+}
+
+.farver {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.color {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    padding-top: 2em;
+    border-radius: 50%;
+    border: 10px solid rgba(0,0,0,.5);
+}
+
+.c1 {background-color: #445763;}
+.c2 {background-color: #F6F6F6;}
+.c3 {background-color: #36454F;}
+.c4 {background-color: #EC0092;}
+
+/* ---------- TYPOGRAFI ---------- */
+
+.sektion3 {
+    margin-top: 50px;
+}
+
+.paragraf3 {
+    max-width:550px;
+    text-align: left;
+    margin:auto;
+}
+
+.columns {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+    margin: 5px 0;
+    max-width: 960px;
+    margin: 20px auto;
+}
+
+.column {
+	flex: 1;
+	border: 1px solid gray;
+	margin: 2px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* ---------- IKONER ---------- */
+
+.sektion4 {
+    margin-top: 50px;
+}
+
+.paragraf4 {
+    text-align: center;
+    color: black;
+    
+}
+
+.icons{
+    text-align: center;
+    margin-top:32px;
+}
+.icons i{
+    margin:0 32px;
+    font-size:3em;
+    color:#f6f6f6;
+}
+
+
+
+/* ---------- KNAPPER ---------- */
+
+
+
+
+/* ---------- TEMPLATES ---------- */
+
+.program-grid{
+    grid-template-rows: repeat(2, 1fr);
+}
+
+section#program-grid{
+    padding-bottom:0;
+}
+
+#prg-code{
+    margin-bottom:100px;
+}
