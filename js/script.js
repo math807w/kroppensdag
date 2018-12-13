@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(
                 function(){
                     nav.style.display = "none";
-                    
                 }, 250);
         }
     } 
@@ -64,11 +63,8 @@ document.addEventListener("DOMContentLoaded", function() {
             var header = document.getElementById('header'),
                 section = document.getElementById('fp-section'),
 
-                // Finder vinduets højde (i px), svarende til enheden vh (Viewport height) i CSS
-                vh = window.innerHeight,
-
                 // Finder ud af, hvor mange pixels der er blevet scrollet fra top. Chrome bruger document.documentElement
-                dst = document.documentElement.scrollTop;
+                dst = document.documentElement.scrollTop,
 
                 // Finder ud af, hvor mange pixels der er blevet scrollet fra top. Safari bruger document.body
                 bst = document.body.scrollTop;
@@ -104,13 +100,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function introAnimation(){
         var paper = document.getElementsByClassName('paper-rip')[0],
-        tw = document.getElementById('title-wrapper');
+        tw = document.getElementById('title-wrapper'),
         pil = document.getElementById('forside-pil-ned');
         paper.style.height = "140px";
         tw.style.marginBottom = "0px";
         setTimeout(
             function(){
                 pil.style.zIndex = ("1");
+                document.getElementsByClassName('btn-face')[0].style.zIndex = ("1");
+                document.getElementsByClassName('btn-instagram')[0].style.zIndex = ("1");
             }, 1500);
     }
         setTimeout(
