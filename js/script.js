@@ -27,12 +27,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /* -------------------- Burger Menu -------------------- */
 
-    var bmiw = document.getElementById('burger-menu-icon-wrapper'),
-        bm = document.getElementById('burger-menu');
+    var bmiw = document.getElementById('burger-menu-icon-wrapper');
 
     bmiw.onclick = function(){
         var nav = document.getElementById('nav'),
-            h = document.getElementById('header');
+            h = document.getElementById('header'),
+            bm = document.getElementById('burger-menu');
         bm.classList.toggle("open");
         if(bm.classList.contains("open")){
             nav.style.display = "block";
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function yScrollHandler(){
         var win = document.getElementById("peekaboo");
         if((window.pageYOffset + window.innerHeight) >= document.body.offsetHeight){
-        win.style.transition = "right 0.7s ease-in-out 0s";
+        win.style.transition = "right 0.7s ease-in-out";
         win.style.display = "block";        
         setTimeout(
             function(){
@@ -110,15 +110,13 @@ document.addEventListener("DOMContentLoaded", function() {
         tw.style.marginBottom = "0px";
         setTimeout(
             function(){
-            pil.style.zIndex = ("1");
+                pil.style.zIndex = ("1");
             }, 1500);
     }
-    setTimeout(
-        function(){
-    introAnimation();
-        }, 250);
-
-    
+        setTimeout(
+            function(){
+                introAnimation();
+            }, 250);
 
 });
 
