@@ -11,14 +11,15 @@
 
  .code{
      box-sizing: border-box;
-     width:400px;
+     min-width:400px;
      height:auto;
      background-color:#f6f6f6;
      margin:64px auto 0 auto;
      padding:32px;
-     overflow: visible;
      box-shadow: 2px 2px 6px #000;
+     max-width: 600px;
  }
+
 
 /* ---------- NAVBAR ---------- */
 
@@ -113,7 +114,6 @@ h2 {
 	margin: 2px;
     padding: 30px;
     text-align: center;
-	
 }
 
 /* ---------- IKONER ---------- */
@@ -128,40 +128,21 @@ h2 {
     
 }
 
+.icons{
+    text-align: center;
+    margin-top:32px;
+}
+.icons i{
+    margin:0 32px;
+    font-size:3em;
+    color:#f6f6f6;
+}
+
 
 
 /* ---------- KNAPPER ---------- */
 
-.sektion5 {
-    margin-top: 50px;
-}
 
-.paragraf5 {
-    text-align: center;
-    color: black;
-}
-
-.btn:link,
-.btn:visited{
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 300;
-    text-decoration: none;
-    background-color: #e67e22;
-    border-radius: 200px;
-    color: #fff;
-    transition: background-color 0.2s, border 0.2s;   
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%); 
-}
-
-
-.btn:hover,
-.btn:active {
-    background-color: #cf6d17;
-    
-}
 
 
 /* ---------- BILLEDER ---------- */

@@ -282,7 +282,6 @@ img.letsfaceit{
 }
 
 .heading{
-    justify-self: center;
     text-align: center;    
     margin-bottom:32px;
 }
@@ -478,7 +477,7 @@ footer p{
 .btn:visited{
     display: inline-block;
     padding: 10px 30px;
-    width: 100px;
+    min-width: 100px;
     font-weight: 300;
     text-decoration: none;
     border-radius: 50px;
@@ -486,6 +485,10 @@ footer p{
     transition: border 0.2s;
     text-align: center;  
     border:1px solid #fff;
+}
+
+.btn i{
+    margin-right: 10px;
 }
 
 #button-wrapper{
@@ -512,10 +515,6 @@ footer p{
     background-size: cover;
 }
 
-.btn i{
-    margin-right: 10px;
-}
-
 /*-------------------- PEEKABOO CSS --------------------*/
 
 #peekaboo{
@@ -523,7 +522,6 @@ footer p{
     position: relative;
     bottom:0px;
     right:-352px;
-    /*background:  #445763;*/
     width:auto;
     font-size: 1.1em;
     text-align: right;

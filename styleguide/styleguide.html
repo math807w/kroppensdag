@@ -14,7 +14,7 @@
 </head>
 <body>
 
- <header id="header" style="top:0;">
+ <header id="header" style="top:0; position:fixed;">
     <div id="header-content">
         <a href="#home">
             <div id="logo">
@@ -66,6 +66,7 @@
       </div>
       <div class="code">
           <code>
+            <strong>/* Farver */</strong><br><br>
             .darkblue{<br>
               color: #445763;<br>
             }<br><br>
@@ -90,9 +91,26 @@
         <div class="heading">
             <h2>Typografi</h2>
         </div>
-        <p class="paragraf3">Den typografi vi har valgt er med til at gøre designet på siden nem og overskuelig. Tekstblokke har en maks bredde på 550px for at give bedre læsevenlighed. </p>
+        <div class="text-block">
+            <p>Den typografi vi har valgt er med til at gøre designet på siden nem og overskuelig. Tekstblokke har en maks bredde på 550px for at give bedre læsevenlighed. </p>
+          </div>        
+          <div class="code">
+            <code>
+              <strong>/* Overskrifter */</strong><br><br>
+              h2{<br>
+                color:#f6f6f6;<br>
+                font-size: 3em;<br>
+                text-align: center;<br>
+              }<br><br>
+              .heading{<br>
+                text-align: center;<br>
+                margin-bottom:32px;<br>
+            }
+            </code>
+        </div>
         <div class="code">
             <code>
+              <strong>/* Brødtekst */</strong><br><br>
               .text-block p{<br>
                 max-width:550px;<br>
                 margin:auto;<br>
@@ -108,44 +126,104 @@
     </section>
 </div>
 
-<div class="sektion3">
-        <h2>TYPOGRAFI</h2>
-        <p class="paragraf3">Den typografi vi har valgt er med til at gøre designet på siden nem og overskuelig. </p>
+<div class="darkblue-bg">
+    <section>
+        <a id="video" class="anchor-link"></a>
+        <div class="heading">
+            <h2>Ikoner</h2>
+        </div>
+        <div class="text-block">
+          <p>Der bruges forskellige ikoner i forskellige forbindelser på siderne. De ser ud som følgende:</p>
+          <div class="icons">
+          <i class="fa fa-chevron-down"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+        <div class="code">
+            <code>
+              <strong>/* Ikoner */</strong><br><br>
+              &lt;head&gt;<br>
+              &lt;link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"&gt;
+              <br>
+              &lt;/head&gt;<br><br>
+              &lt;div class="icons"&gt;<br>
+              &nbsp;&lt;i class="fab fa-chevron-down"&gt;&lt;/i&gt;<br>
+              &nbsp;&lt;i class="fab fa-facebook-f"&gt;&lt;/i&gt;<br>
+              &nbsp;&lt;i class="fab fa-instagram"&gt;&lt;/i&gt;<br>
+              &lt;/div&gt;<br><br>
+              .icons{<br>
+              }<br><br>
+              .icons i{<br>
+                font-size: 1em;<br>
+                color: #f6f6f6;<br>
+                text-align: center;<br>
+            }
+            </code>
+        </div>
+    </section>
+</div>
 
-        <section class="columns">
-                <div class="column">
-                    <h2>Header Eksempel</h2>
-                    <p>Paragraf Eksempel</p>
-                </div>
-                
-                <div class="column">
-                    <h2>Header eksempel</h2>
-                    <p>Paragraf Eksempel</p>
-                </div>
-        </section>	
- </div>
- <div class="sektion4">
-        <h2>IKONER</h2>
-        <p class="paragraf4">Vi har brugt de forskellige ikoner på forskellige tidspunkter på siderne.<br> 
-                På første side vises sociale medier i form af ikoner.<br><br> De ser ud som følgende: 
-                 </p>
-
-
-
-
- </div>
- <div class="sektion5">
+ <div class="lightblue-bg">
+   <section>
+     <div class="heading">
         <h2>KNAPPER</h2>
-        <p class="paragraf5">Knapperne kommer forskelligt. Vi har to C2A knapper på alle tre sider. 
-                De er forskellige fra hver af de 3 sider.<br> 
-                Dog er alle i UI colour. 
-                Alle knapper er lange ovale. 
-                 </p>
-         <a class="btn btn-full" href="#">Call to action knap</a>
+     </div>
+     <div class="text-block">
+        <p>Knapperne kommer forskelligt. <br>Vi har to C2A knapper på forsiden: 
+        </p>
+     </div>
+     <div id="button-wrapper">
+        <a class="btn btn-face" href="https://www.facebook.com/Kroppens-Dag-372914183281217/" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a>
+        <a class="btn btn-instagram" href="https://www.instagram.com/?hl=da" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+    </div>
+    <div class="code">
+        <code>
+          <strong>/* Knapper */</strong><br><br>
+          .btn:link,<br>
+          .btn:visited{<br>
+              display: inline-block;<br>
+              padding: 10px 30px;<br>
+              min-width: 100px;<br>
+              font-weight: 300;<br>
+              text-decoration: none;<br>
+              border-radius: 50px;<br>
+              color: #fff;<br>
+              transition: border 0.2s;<br>
+              text-align: center;<br>
+              border:1px solid #fff;<br>
+          }<br><br>
 
+          #button-wrapper{<br>
+              display: flex;<br>
+              justify-content: center;<br>
+              margin-top:32px;<br>
+          }<br><br>
 
+          .btn i{<br>
+            margin-right: 10px;<br>
+          }<br><br>
+              
+          .btn-face{<br>
+              margin-right: 20px;<br>
+              background:#445763;<br>
+          }<br><br>
 
+          .btn-face:hover{<br>
+              background: #324b80;   <br>
+          }<br><br>
 
+          .btn-instagram{<br>
+              background-color:#445763;<br>
+          }<br><br>
+
+          .btn-instagram:hover{<br>
+              background-image: url('img/instagram-bg.png');<br>
+              background-size: cover;<br>
+          }<br>
+        </code>
+    </div>
+    </section>
 </div>
 <div class="sektion6">
         <h2>BILLEDER</h2>
