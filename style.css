@@ -22,6 +22,10 @@ html{
     background:  #36454F;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 p{
     color:#f6f6f6;
     font-size: 1.3em;
@@ -519,13 +523,14 @@ footer p{
 
 #peekaboo{
     box-sizing: border-box;
-    position: relative;
     bottom:0px;
-    right:-352px;
+    right:-100vw;
     width:auto;
     font-size: 1.1em;
     text-align: right;
     float:right;
+    position: relative;
+    display: none;
 }
 
 #peekaboo a{
