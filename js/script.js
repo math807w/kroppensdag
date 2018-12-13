@@ -27,9 +27,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /* -------------------- Burger Menu -------------------- */
 
-    var bm = document.getElementById('burger-menu');
+    var bmiw = document.getElementById('burger-menu-icon-wrapper'),
+        bm = document.getElementById('burger-menu');
 
-    bm.onclick = function(){
+    bmiw.onclick = function(){
         var nav = document.getElementById('nav'),
             h = document.getElementById('header');
         bm.classList.toggle("open");
@@ -89,13 +90,34 @@ document.addEventListener("DOMContentLoaded", function() {
         if((window.pageYOffset + window.innerHeight) >= document.body.offsetHeight){
         //win.style.webkitTransition = "right 0.7s ease-in-out 0s";
         win.style.transition = "right 0.7s ease-in-out 0s";
-        win.style.right = "10%";
-        } else {
+        win.style.right = "0";
+        } /*else {
+            
         win.style.transition = "right 0.7s ease-in-out 0s";
         win.style.right = "-452px";
-        }
+        }*/
     }
     window.onscroll = yScrollHandler;
+
+
+        /* -------------------- Intro parallax animation -------------------- */
+    function introAnimation(){
+        var paper = document.getElementsByClassName('paper-rip')[0],
+        tw = document.getElementById('title-wrapper');
+        pil = document.getElementById('forside-pil-ned');
+        paper.style.height = "140px";
+        tw.style.marginBottom = "0px";
+        setTimeout(
+            function(){
+            pil.style.zIndex = ("1");
+            }, 1500);
+    }
+    setTimeout(
+        function(){
+    introAnimation();
+        }, 250);
+
     
+
 });
 
