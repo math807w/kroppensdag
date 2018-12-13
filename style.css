@@ -289,7 +289,7 @@ left: 50%;
 img.letsfaceit{
     height: auto;
     width:35vw;
-    max-width:800px;
+    max-width:600px;
 }
 
 #spacing {
@@ -372,7 +372,6 @@ img.letsfaceit{
 .speaker-img{
     height:200px;
     width:100%;
-    background-position: center;
 }
 
 .speaker-img:hover{
