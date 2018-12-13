@@ -329,9 +329,8 @@ img.letsfaceit{
 }
 
 /* TEKST */
-.text-block{
+.text-block p{
     max-width:550px;
-    text-align: left;
     margin:auto;
 }
 

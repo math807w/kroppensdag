@@ -7,31 +7,22 @@
 
  html, body {
     margin: 0 auto;
-    font-family: l, Helvetica, sans-serif;
+ }
+
+ .code{
+     box-sizing: border-box;
+     width:400px;
+     height:auto;
+     background-color:#f6f6f6;
+     margin:64px auto 0 auto;
+     padding:32px;
+     overflow: visible;
+     box-shadow: 2px 2px 6px #000;
  }
 
 /* ---------- NAVBAR ---------- */
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 150px;
-    text-align: center; 
-    margin-top: 20px; 
-}
 
-li {
-    display: inline;
-  
-}
-    
-li a {
-    text-decoration: none;
-    margin: 20px; 
-    color: white;
-    font-weight: lighter;
-}
   
 /* ---------- HEADER ---------- */
 
@@ -64,8 +55,7 @@ h1 {
 }
 
 h2 {
-    text-align: center;
-    color:black;
+
 }
 
 .paragraf2 {
@@ -103,8 +93,9 @@ h2 {
 }
 
 .paragraf3 {
-    text-align: center;
-    color: black;
+    max-width:550px;
+    text-align: left;
+    margin:auto;
 }
 
 .columns {
