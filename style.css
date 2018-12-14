@@ -404,9 +404,6 @@ background: #445763;
     grid-row: 1;
     grid-column-start: 1;
     grid-column-end: 3;
-    display: flex;
-    width:50%;
-    justify-self: center;
     margin-bottom:64px;
 }
 
