@@ -4,7 +4,6 @@
             var header = document.getElementById('header'),
                 section = document.getElementById('fp-section'),
                 dst = document.documentElement.scrollTop,
-                bst = document.body.scrollTop;
 
             if (dst >= section.offsetHeight){
                 header.style.top = "0px";
