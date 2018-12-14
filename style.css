@@ -302,6 +302,9 @@ img.letsfaceit{
 .video-wrapper{
     height:auto;
     max-width:1100px;
+    box-sizing: border-box;
+    border:1px solid #f6f6f6;
+    background-color: #445763;    
 }
 
 .video-wrapper video{
