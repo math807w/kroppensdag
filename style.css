@@ -1,5 +1,4 @@
-@media screen and (max-width: 992px){
-}
+
 
 /* -------------------- Farver -------------------- */
 
@@ -217,6 +216,7 @@ left: 50%;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .paper-rip{
@@ -343,6 +343,7 @@ img.letsfaceit{
 .img1{
     background-image: url(img/søren.jpg);
     background-size: cover;
+    background-position: 30%;
 }
 
 .img2{
@@ -353,6 +354,7 @@ img.letsfaceit{
 .img3{
     background-image: url(img/mikkel.jpg);
     background-size: cover;
+    background-position: 50%;
 }
 
 .speaker-name{
@@ -392,6 +394,11 @@ background: #445763;
 }
 
 /*-------------------- Program --------------------*/
+#dato{
+    font-size:2.6em;
+    color:#fff;
+    font-weight: 400;
+}
 
 .program-grid{
     display: grid;
@@ -553,5 +560,256 @@ footer p{
 
 #peekaboo a:hover p{
     text-decoration: underline;
+}
+
+/* iPhone SE */
+@media only screen and (min-width: 100px) and (max-width: 374px){
+    #header-content{
+        width:90%;
+    }
+    #nav{
+        font-size: 1.3em;
+    }
+    section{
+        box-sizing: border-box;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .paper-rip{
+        height:330px;
+        margin-bottom:-2px;
+    }
+    #parallax-scene{
+        background-image: url('img/para-bg-mobile.png');
+        background-attachment: initial;
+        background-position: bottom;
+    }
+    #fp-section{
+        height:89vh;
+    }
+    .title-logo{
+        width:80vw;
+    }
+    img.letsfaceit{
+        width:65vw;
+        margin-bottom:48px;
+    }
+    .btn:link,
+    .btn:visited{
+        padding: 20px 30px;
+        min-width: 200px;
+        font-weight: 300;
+        font-size: 2em;
+    }
+    .text-block p{
+        max-width: 80%;
+        font-size:2em;
+    }
+    .program-grid{
+        font-size:1.2em;
+    }
+    footer{
+        font-size:1.2em;
+    }
+    #peekaboo{
+        bottom:0px;
+        right:0;
+        width:auto;
+        font-size: 1.1em;
+        text-align: right;
+        float:right;
+        display: block;
+    }
+}
+
+/* iPhone 8 */
+@media only screen and (min-width: 375px) and (max-width: 412px){
+    #header-content{
+        width:90%;
+    }
+    #nav{
+        font-size: 1.3em;
+    }
+    section{
+        box-sizing: border-box;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .paper-rip{
+        height:330px;
+        margin-bottom:-2px;
+    }
+    #parallax-scene{
+        background-image: url('img/para-bg-mobile.png');
+        background-attachment: initial;
+        background-position: bottom;
+    }
+    #fp-section{
+        height:89vh;
+    }
+    .title-logo{
+        width:80vw;
+    }
+    img.letsfaceit{
+        width:65vw;
+        margin-bottom:48px;
+    }
+    .btn:link,
+    .btn:visited{
+        padding: 20px 30px;
+        min-width: 200px;
+        font-weight: 300;
+        font-size: 2em;
+    }
+    .text-block p{
+        max-width: 80%;
+        font-size:2em;
+    }
+    .program-grid{
+        font-size:1.2em;
+    }
+    footer{
+        font-size:1.2em;
+    }
+    #peekaboo{
+        bottom:0px;
+        right:0;
+        width:auto;
+        font-size: 1.1em;
+        text-align: right;
+        float:right;
+        display: block;
+    }
+}
+
+/* iphone 8 Plus */
+@media only screen and (min-width: 413px) and (max-width: 768px){
+    #header-content{
+        width:90%;
+    }
+    #nav{
+        font-size: 1.3em;
+    }
+    section{
+        box-sizing: border-box;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .paper-rip{
+        height:330px;
+        margin-bottom:-2px;
+    }
+    #parallax-scene{
+        background-image: url('img/para-bg-mobile.png');
+        background-attachment: initial;
+        background-position: bottom;
+    }
+    #fp-section{
+        height:89vh;
+    }
+    .title-logo{
+        width:80vw;
+    }
+    img.letsfaceit{
+        width:65vw;
+        margin-bottom:48px;
+    }
+    .btn:link,
+    .btn:visited{
+        padding: 20px 30px;
+        min-width: 200px;
+        font-weight: 300;
+        font-size: 2em;
+    }
+    .text-block p{
+        max-width: 80%;
+        font-size:2em;
+    }
+    .program-grid{
+        font-size:1.2em;
+    }
+    footer{
+        font-size:1.2em;
+    }
+    #peekaboo{
+        bottom:0px;
+        right:0;
+        width:auto;
+        font-size: 1.1em;
+        text-align: right;
+        float:right;
+        display: block;
+    }
+}
+
+/* Tablet Sheet Mini */
+@media only screen and (min-width: 768px) and (max-width: 1112px) {
+    #header-content{
+        width:90%;
+    }
+    #nav{
+        font-size: 1.3em;
+    }
+    section{
+        box-sizing: border-box;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .paper-rip{
+        height:330px;
+        margin-bottom:-2px;
+    }
+    #parallax-scene{
+        background-image: url('img/para-bg-mobile.png');
+        background-attachment: initial;
+        background-position: bottom;
+    }
+    #fp-section{
+        height:89vh;
+    }
+    .title-logo{
+        width:80vw;
+    }
+    img.letsfaceit{
+        width:65vw;
+        margin-bottom:48px;
+    }
+    .btn:link,
+    .btn:visited{
+        padding: 20px 30px;
+        min-width: 200px;
+        font-weight: 300;
+        font-size: 2em;
+    }
+    .text-block p{
+        max-width: 80%;
+        font-size:2em;
+    }
+    .program-grid{
+        font-size:1.2em;
+    }
+    footer{
+        font-size:1.2em;
+    }
+    #peekaboo{
+        bottom:0px;
+        right:0;
+        width:auto;
+        font-size: 1.1em;
+        text-align: right;
+        float:right;
+        display: block;
+    }
+    
+}
+
+/* Tablet Sheet iPad */
+@media only screen and (min-width: 1112px) and (max-width: 1320px) {
+
+}
+
+/* Tablet Sheet Ipad Pro 10  -12 */
+@media only screen and (min-width: 1320px) and (max-width: 1920px) {
+
 }
 
